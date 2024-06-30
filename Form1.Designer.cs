@@ -788,7 +788,7 @@
             getPayment.Name = "getPayment";
             getPayment.Size = new Size(97, 23);
             getPayment.TabIndex = 12;
-            getPayment.Text = "Get Pay";
+            getPayment.Text = "Make Pay";
             getPayment.UseVisualStyleBackColor = true;
             getPayment.Click += getPayment_Click;
             // 

@@ -343,76 +343,84 @@ namespace One_Stop_Tourist_identity_Application
 
         private void getRestaurantPriceButton_Click(object sender, EventArgs e)
         {
-            //if (decimal.TryParse(outputLabelFareOnThisFlight.Text, out airplaneFares))
-            //{ 
-            string combinedRestaurants;
-
-            if (decimal.TryParse(outputLabelFareOnThisRoom.Text, out decimal lodgingFares))
+            try
             {
-                if (decimal.TryParse(outputLabelFareOnThisTouristSite.Text, out decimal combinedSiteSeeingFares))
+                //if (decimal.TryParse(outputLabelFareOnThisFlight.Text, out airplaneFares))
+                //{ 
+                string combinedRestaurants;
+
+                if (decimal.TryParse(outputLabelFareOnThisRoom.Text, out decimal lodgingFares))
                 {
-                    if (decimal.TryParse(budgetValueTextBox.Text, out decimal budgetValue))
+                    if (decimal.TryParse(outputLabelFareOnThisTouristSite.Text, out decimal combinedSiteSeeingFares))
                     {
-
-                        if (lodgingFares >= combinedSiteSeeingFares || combinedSiteSeeingFares >= budgetValue)
+                        if (decimal.TryParse(budgetValueTextBox.Text, out decimal budgetValue))
                         {
-                            if (budgetValue <= combinedSiteSeeingFares || budgetValue >= lodgingFares)
-                                // Continue to process the input.
-                                // To hold the name of a restaurant or group of restaurants that fit to tourism  categories, country and fare fit to budget
 
-                                if (restaurantsPricesListBox.SelectedIndex != -1)
-                                {
-                                    if (restaurantsPricesListBox.SelectedIndex == 1)
+                            if (lodgingFares >= combinedSiteSeeingFares || combinedSiteSeeingFares >= budgetValue)
+                            {
+                                if (budgetValue <= combinedSiteSeeingFares || budgetValue >= lodgingFares)
+                                    // Continue to process the input.
+                                    // To hold the name of a restaurant or group of restaurants that fit to tourism  categories, country and fare fit to budget
+
+                                    if (restaurantsPricesListBox.SelectedIndex != -1)
                                     {
-                                        // Get the selected item.
-                                        combinedRestaurants = restaurantsPricesListBox.SelectedItem.ToString();
-
-
-                                        outputLabelPriceForThisRestaurants.Text = combinedRestaurants;
-
-
-                                        // Determine the sightseeing fare
-                                        switch (combinedRestaurants)
+                                        if (restaurantsPricesListBox.SelectedIndex == 1)
                                         {
-                                            case "PF Chang's":
-                                                outputLabelPriceForThisRestaurants.Text = "200";
-                                                break;
-                                            case "Ben's Chilli Bowl: Washignton DC location":
-                                                outputLabelPriceForThisRestaurants.Text = "150";
-                                                break;
-                                            default:
-                                                MessageBox.Show("Restaurant Chain must be either in listing or pricing process");
-                                                break;
+                                            // Get the selected item.
+                                            combinedRestaurants = restaurantsPricesListBox.SelectedItem.ToString();
+
+
+                                            outputLabelPriceForThisRestaurants.Text = combinedRestaurants;
+
+
+                                            // Determine the sightseeing fare
+                                            switch (combinedRestaurants)
+                                            {
+                                                case "PF Chang's":
+                                                    outputLabelPriceForThisRestaurants.Text = "200";
+                                                    break;
+                                                case "Ben's Chilli Bowl: Washignton DC location":
+                                                    outputLabelPriceForThisRestaurants.Text = "150";
+                                                    break;
+                                                default:
+                                                    MessageBox.Show("Restaurant Chain must be either in listing or pricing process");
+                                                    break;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Please select a restaurant from the list");
                                         }
                                     }
                                     else
                                     {
-                                        MessageBox.Show("Please select a restaurant from the list");
+                                        MessageBox.Show("Insufficient fit to budget of tour");
                                     }
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Insufficient fit to budget of tour");
-                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("The budget selection must either increase or select other items on the previous tour sections.");
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("The budget selection must either increase or select other items on the previous tour sections.");
+                            MessageBox.Show("Invalid budget value. Please ensure the budget is a valid number.");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Invalid budget value. Please ensure the budget is a valid number.");
+                        MessageBox.Show("Invalid sightseeing fare. Please ensure the fare is a valid number.");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Invalid sightseeing fare. Please ensure the fare is a valid number.");
+                    MessageBox.Show("Invalid lodging fare. Please ensure the fare is a valid number.");
                 }
             }
-            else
+
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid lodging fare. Please ensure the fare is a valid number.");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -494,13 +502,14 @@ namespace One_Stop_Tourist_identity_Application
 
         private void insertBudget_Click(object sender, EventArgs e)
         {
-            {
-                try
+            { 
+            
+           try
                 {
                     decimal budgetValue;
                     budgetValue = decimal.Parse(budgetValueTextBox.Text);
                     if (budgetValue != 300 && budgetValue < 300)
-                        MessageBox.Show("Increase Budget");
+                        MessageBox.Show("Increase Budget and compare it with every section of the ticket before you pack and travel");
                     outputBudgetToFitLabel.Text = budgetValue.ToString();
                     outputBudgetToFitLabel2.Text = budgetValue.ToString();
                     outputBudgetToFitLabel3.Text = budgetValue.ToString();
@@ -542,42 +551,49 @@ namespace One_Stop_Tourist_identity_Application
 
         private void displayValueOfPAXOnThisPage_Click_1(object sender, EventArgs e)
         {
-            if (int.TryParse(airplaneFlightPassengerSeatCountTextBox.Text, out int mainCountPax) &&
-                           int.TryParse(outputCopiedPaxIntegerLabel1.Text, out int countAirlinePax) &&
-                           int.TryParse(outputCopiedPaxIntegerLabel2.Text, out int countRoomPax) &&
-                           int.TryParse(outputCopiedPaxIntegerLabel3.Text, out int countSiteSeeingTicketsAndPax) &&
-                           int.TryParse(outputCopiedPaxIntegerLabel5.Text, out int countRestaurants))
+            try
             {
-                if (mainCountPax == countAirlinePax && mainCountPax == countRoomPax &&
-                    mainCountPax == countSiteSeeingTicketsAndPax && mainCountPax == countRestaurants)
+                if (int.TryParse(airplaneFlightPassengerSeatCountTextBox.Text, out int mainCountPax) &&
+                               int.TryParse(outputCopiedPaxIntegerLabel1.Text, out int countAirlinePax) &&
+                               int.TryParse(outputCopiedPaxIntegerLabel2.Text, out int countRoomPax) &&
+                               int.TryParse(outputCopiedPaxIntegerLabel3.Text, out int countSiteSeeingTicketsAndPax) &&
+                               int.TryParse(outputCopiedPaxIntegerLabel5.Text, out int countRestaurants))
                 {
-                    int combinedPax = mainCountPax;
-                    outputCopiedPaxIntegerLabel1.Text = combinedPax.ToString();
-                    outputCombinedPaxLabel2.Text = combinedPax.ToString();
-                    outputCopiedPaxIntegerLabel3.Text = combinedPax.ToString();
-                    outputCopiedPaxIntegerLabel5.Text = combinedPax.ToString();
-
-                    // Constant for the maximum number
-                    const int MAX_PAX = 4;
-
-                    // Loop counter
-                    int number;
-
-                    // Display the list of numbers and their squares.
-                    for (number = 3; number <= MAX_PAX; number++)
+                    if (mainCountPax == countAirlinePax && mainCountPax == countRoomPax &&
+                        mainCountPax == countSiteSeeingTicketsAndPax && mainCountPax == countRestaurants)
                     {
-                        forLoopListBox.Items.Add("The credit points of " + number + " PAX is " + (3 * 100) + "points in the mileage system");
+                        int combinedPax = mainCountPax;
+                        outputCopiedPaxIntegerLabel1.Text = combinedPax.ToString();
+                        outputCombinedPaxLabel2.Text = combinedPax.ToString();
+                        outputCopiedPaxIntegerLabel3.Text = combinedPax.ToString();
+                        outputCopiedPaxIntegerLabel5.Text = combinedPax.ToString();
+
+                        // Constant for the maximum number
+                        const int MAX_PAX = 3;
+
+                        // Loop counter
+                        int number;
+
+                        // Display the list of numbers and their squares.
+                        for (number = 2; number <= MAX_PAX; number++)
+                        {
+                            forLoopListBox.Items.Add("The credit points of " + number + " PAX is " + (2 * 100) + "points in the mileage system");
+                        }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Passenger counts do not match across all fields.");
                     }
                 }
-
                 else
                 {
-                    MessageBox.Show("Passenger counts do not match across all fields.");
+                    MessageBox.Show("Invalid input. Please ensure all fields contain valid numbers.");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid input. Please ensure all fields contain valid numbers.");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -822,7 +838,7 @@ namespace One_Stop_Tourist_identity_Application
             }
 
         }
-        //
+        
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
@@ -835,6 +851,7 @@ namespace One_Stop_Tourist_identity_Application
 
         private void goButtonWhileLoop2_Click(object sender, EventArgs e)
         {
+            try
             {
                 // Constant for the monthly sales tax rate
                 // const decimal NATIONAL_IDENTITYTHEFT = 0.001m;
@@ -884,7 +901,11 @@ namespace One_Stop_Tourist_identity_Application
                         MessageBox.Show("Invalid value for lodgingFares.");
                     }
                 }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
+          }
         
         private void goButtonWhileLoop3_Click(object sender, EventArgs e)
         {
@@ -941,6 +962,7 @@ namespace One_Stop_Tourist_identity_Application
 
         private void goButtonWhileLoop4_Click(object sender, EventArgs e)
         {
+            try
             {
                 // Constant for the monthly sales tax rate
                 const int MAX_VALUE = 2;
@@ -986,6 +1008,10 @@ namespace One_Stop_Tourist_identity_Application
                     // Invalid flightPrice was entered.
                     MessageBox.Show("Invalid value for combinedRestaurants.");
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -1033,52 +1059,60 @@ namespace One_Stop_Tourist_identity_Application
         private void goButtonWhileLoop_Click(object sender, EventArgs e)
         {
 
-            // Constant for the monthly sales tax rate
-            // const int PERCENTAGE_NATIONALIDENTITYTHEFT = 10;
-            // const int PERCENTAGE_WASTEMANAGEMENT = 10;
-            //  const int PERCENTAGE_SUSTAINABILITYENVIRONEMENT = 10;
-            const int MAX_VALUE = 2;
-            const int START_PAX = 1;
-            const int INTERVALS = 1;
-
-            // Local variables
-            int pax;                        // The number of pax
-            int airlineFares;              // The price from the price list
-            int count = 1;                // Loop counter, initialized with 1
-
-
-            // Get the fit price to the budget.
-            if (int.TryParse(outputLabelFareOnThisFlight.Text, out airlineFares))
+            try
             {
-                // Get the number of pax.
-                if (int.TryParse(outputCopiedPaxIntegerLabel1.Text, out pax))
 
+                // Constant for the monthly sales tax rate
+                // const int PERCENTAGE_NATIONALIDENTITYTHEFT = 10;
+                // const int PERCENTAGE_WASTEMANAGEMENT = 10;
+                //  const int PERCENTAGE_SUSTAINABILITYENVIRONEMENT = 10;
+                const int MAX_VALUE = 2;
+                const int START_PAX = 1;
+                const int INTERVALS = 1;
+
+                // Local variables
+                int pax;                        // The number of pax
+                int airlineFares;              // The price from the price list
+                int count = 1;                // Loop counter, initialized with 1
+
+
+                // Get the fit price to the budget.
+                if (int.TryParse(outputLabelFareOnThisFlight.Text, out airlineFares))
                 {
-                    // airlineFares = (airlineFares * PERCENTAGE_NATIONALIDENTITYTHEFT) + (airlineFares * PERCENTAGE_WASTEMANAGEMENT) * (airlineFares * PERCENTAGE_SUSTAINABILITYENVIRONEMENT);
-                    // outputLabelFareOnThisFlight.Text = airlineFares.ToString("n");
-                }
-                {
-                    // The following loop calculates the price of this portion of the mandatory combined boarding pass and ticket
-                    for (pax = START_PAX; pax <= MAX_VALUE; pax += 1)
+                    // Get the number of pax.
+                    if (int.TryParse(outputCopiedPaxIntegerLabel1.Text, out pax))
+
                     {
-                        // calculate the flight price to compare with the budget down
-                        //portion of the combined fare ticket
-                        // Calculate the total flight price including additional charges
-                        // We are using a loop to accumulate the fares
-                        airlineFares = airlineFares * pax;
-                        airlineFaresListBox2.Items.Add(pax.ToString("n") + " pax has the rate like that " + airlineFares.ToString("n1"));
-                        // Add one to the loop counter.
-                        count = count + 1;
+                        // airlineFares = (airlineFares * PERCENTAGE_NATIONALIDENTITYTHEFT) + (airlineFares * PERCENTAGE_WASTEMANAGEMENT) * (airlineFares * PERCENTAGE_SUSTAINABILITYENVIRONEMENT);
+                        // outputLabelFareOnThisFlight.Text = airlineFares.ToString("n");
                     }
+                    {
+                        // The following loop calculates the price of this portion of the mandatory combined boarding pass and ticket
+                        for (pax = START_PAX; pax <= MAX_VALUE; pax += 1)
+                        {
+                            // calculate the flight price to compare with the budget down
+                            //portion of the combined fare ticket
+                            // Calculate the total flight price including additional charges
+                            // We are using a loop to accumulate the fares
+                            airlineFares = airlineFares * pax;
+                            airlineFaresListBox2.Items.Add(pax.ToString("n") + " pax has the rate like that " + airlineFares.ToString("n1"));
+                            // Add one to the loop counter.
+                            count = count + 1;
+                        }
 
-                    // Display the new flightPrice.
-                    // outputLabelFareOnThisFlight.Text = airLineFares.ToString("n");
+                        // Display the new flightPrice.
+                        // outputLabelFareOnThisFlight.Text = airLineFares.ToString("n");
+                    }
+                }
+                else
+                {
+                    // Invalid number of pax was entered.
+                    MessageBox.Show("Invalid value for pax and airlineFares.");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                // Invalid number of pax was entered.
-                MessageBox.Show("Invalid value for pax and airlineFares.");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -1121,7 +1155,44 @@ namespace One_Stop_Tourist_identity_Application
 
         private void comparePriceAndBudgetMatch4_Click(object sender, EventArgs e)
         {
+            {
+                try
+                {
+                    int combinedRestaurantFares;
+                    int combinedSiteSeeingFares;
+                    int budgetValue;
+                    // Declare a string variable and initialize it with
+                    // the tourist's input.
+                    // Did the tourist enter the correct budgetValue?
+                    if (int.TryParse(outputLabelPriceForThisRestaurants.Text, out combinedRestaurantFares))
+                    {
+                        if (int.TryParse(outputLabelFareOnThisTouristSite.Text, out combinedSiteSeeingFares))
+                        {
 
+                            if (int.TryParse(budgetValueTextBox.Text, out budgetValue))
+                            {
+                                if (combinedRestaurantFares == budgetValue || combinedRestaurantFares > combinedSiteSeeingFares)
+                                {
+                                    MessageBox.Show("These combined restaurnats fare are not a budget fit value.");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Okay, that still fit with your calculated secret budget value.");
+
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Okay");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void comparePriceAndBudgetMatch3_Click(object sender, EventArgs e)
