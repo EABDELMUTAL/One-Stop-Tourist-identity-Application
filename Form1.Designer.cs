@@ -30,15 +30,28 @@
         {
             combinedBoardingPassAndTicket = new TabControl();
             automatedTourOperatourFutureGoal = new TabPage();
+            mathTestingButton = new Button();
+            clearButton2ND = new Button();
+            clearButton = new Button();
+            textBox2 = new TextBox();
+            label6 = new Label();
+            textBox1 = new TextBox();
+            label5 = new Label();
+            pictureBox2 = new PictureBox();
             displayAirlineFaresRepeatedly = new Button();
             refreshPriceDataType = new Button();
             outputResetValuesListBox1 = new TabControl();
-            tabPage10 = new TabPage();
+            resetPrices = new TabPage();
             outputResetValuesListBox = new ListBox();
-            tabPage11 = new TabPage();
+            advantageOfThreePaxFigures = new TabPage();
             forLoopListBox = new ListBox();
-            tabControl1 = new TabControl();
+            weeklyPlanner = new TabControl();
             touristIdentification = new TabPage();
+            passengerNameTextBox1 = new TextBox();
+            passengerNameTextBox6 = new TextBox();
+            passengerNameTextBox5 = new TextBox();
+            passengerNameTextBox4 = new TextBox();
+            passengerFirstName = new TextBox();
             outputTouristIdentityLabel4 = new Label();
             passengerButton = new Button();
             generateTouristIdentity = new Button();
@@ -52,9 +65,18 @@
             tourismLabel7 = new Label();
             tourismLabel6 = new Label();
             oneStopTouristIdentity = new Label();
-            tabPage5 = new TabPage();
-            tabPage6 = new TabPage();
-            tabPage7 = new TabPage();
+            weeklyPlannerTabPage = new TabPage();
+            listBoxTasks = new ListBox();
+            addButton = new Button();
+            showTasksButton = new Button();
+            taskTextBox = new TextBox();
+            listBoxDays = new ListBox();
+            accumulatedBalance = new TabPage();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            creditPointsToMileage = new TabPage();
             tabPage8 = new TabPage();
             tabPage9 = new TabPage();
             sigthSeeingSelectionColorControl = new RadioButton();
@@ -76,9 +98,9 @@
             combinedPricingLabel = new Label();
             ticketReferenceLabel = new Label();
             panel5 = new Panel();
+            automatedRestaurnatsBookingListBox = new ListBox();
             restaurantsSelectionColorControl = new RadioButton();
             outputBudgetToFitLabel4 = new Label();
-            outputBookedRestaurantSeatsLabel = new ListBox();
             restaurantPictureBox = new PictureBox();
             tourismLabel4 = new Label();
             goButtonWhileLoop4 = new Button();
@@ -95,22 +117,8 @@
             airplaneFlightPassengerSeatCountTextBox = new TextBox();
             insertBudget = new Button();
             budgetValueTextBox = new TextBox();
-            panel4 = new Panel();
-            outputBudgetToFitLabel3 = new Label();
-            outputBookedSightSeeingGatesLabel = new ListBox();
-            sightseeingPictureBox = new PictureBox();
-            tourismLabel3 = new Label();
-            goButtonWhileLoop3 = new Button();
-            comparePriceAndBudgetMatch3 = new Button();
-            getPriceFromAnnouncedSiteListPriceButton = new Button();
-            outputifOnlyOneTourOptionListed = new Label();
-            siteSeeingFaresListBox = new ListBox();
-            priceOfSiteseeingLabel = new Label();
-            numberOfPaxLabel3 = new Label();
-            outputLabelFareOnThisTouristSite = new Label();
-            outputCopiedPaxIntegerLabel3 = new Label();
             panel3 = new Panel();
-            clearButton2ND = new Button();
+            lodgingFaresListBox = new ListBox();
             lodgingPictureBox = new PictureBox();
             outputBudgetToFitLabel2 = new Label();
             tourismLabel2 = new Label();
@@ -124,7 +132,7 @@
             outputLabelFareOnThisRoom = new Label();
             outputCopiedPaxIntegerLabel2 = new Label();
             panel2 = new Panel();
-            clearButton = new Button();
+            airlineFaresListBox2 = new ListBox();
             outputBudgetToFitLabel = new Label();
             airplanePictureBox = new PictureBox();
             tourismLabel1 = new Label();
@@ -138,31 +146,43 @@
             outputLabelFareOnThisFlight = new Label();
             outputCopiedPaxIntegerLabel1 = new Label();
             exitButton = new Button();
+            panel4 = new Panel();
+            eTourTourismAttractionsListBox = new ListBox();
+            outputBudgetToFitLabel3 = new Label();
+            sightseeingPictureBox = new PictureBox();
+            tourismLabel3 = new Label();
+            goButtonWhileLoop3 = new Button();
+            comparePriceAndBudgetMatch3 = new Button();
+            getPriceFromAnnouncedSiteListPriceButton = new Button();
+            outputifOnlyOneTourOptionListed = new Label();
+            siteSeeingFaresListBox = new ListBox();
+            priceOfSiteseeingLabel = new Label();
+            numberOfPaxLabel3 = new Label();
+            outputLabelFareOnThisTouristSite = new Label();
+            outputCopiedPaxIntegerLabel3 = new Label();
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
-            passengerFirstName = new TextBox();
-            passengerNameTextBox4 = new TextBox();
-            passengerNameTextBox5 = new TextBox();
-            passengerNameTextBox6 = new TextBox();
-            passengerNameTextBox1 = new TextBox();
             combinedBoardingPassAndTicket.SuspendLayout();
             automatedTourOperatourFutureGoal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             outputResetValuesListBox1.SuspendLayout();
-            tabPage10.SuspendLayout();
-            tabPage11.SuspendLayout();
-            tabControl1.SuspendLayout();
+            resetPrices.SuspendLayout();
+            advantageOfThreePaxFigures.SuspendLayout();
+            weeklyPlanner.SuspendLayout();
             touristIdentification.SuspendLayout();
+            weeklyPlannerTabPage.SuspendLayout();
+            accumulatedBalance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel6.SuspendLayout();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)restaurantPictureBox).BeginInit();
-            panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)sightseeingPictureBox).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)lodgingPictureBox).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)airplanePictureBox).BeginInit();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)sightseeingPictureBox).BeginInit();
             SuspendLayout();
             // 
             // combinedBoardingPassAndTicket
@@ -182,10 +202,18 @@
             // automatedTourOperatourFutureGoal
             // 
             automatedTourOperatourFutureGoal.BackColor = Color.FromArgb(192, 255, 192);
+            automatedTourOperatourFutureGoal.Controls.Add(mathTestingButton);
+            automatedTourOperatourFutureGoal.Controls.Add(clearButton2ND);
+            automatedTourOperatourFutureGoal.Controls.Add(clearButton);
+            automatedTourOperatourFutureGoal.Controls.Add(textBox2);
+            automatedTourOperatourFutureGoal.Controls.Add(label6);
+            automatedTourOperatourFutureGoal.Controls.Add(textBox1);
+            automatedTourOperatourFutureGoal.Controls.Add(label5);
+            automatedTourOperatourFutureGoal.Controls.Add(pictureBox2);
             automatedTourOperatourFutureGoal.Controls.Add(displayAirlineFaresRepeatedly);
             automatedTourOperatourFutureGoal.Controls.Add(refreshPriceDataType);
             automatedTourOperatourFutureGoal.Controls.Add(outputResetValuesListBox1);
-            automatedTourOperatourFutureGoal.Controls.Add(tabControl1);
+            automatedTourOperatourFutureGoal.Controls.Add(weeklyPlanner);
             automatedTourOperatourFutureGoal.Controls.Add(sigthSeeingSelectionColorControl);
             automatedTourOperatourFutureGoal.Controls.Add(lodgingSelectionColorControl);
             automatedTourOperatourFutureGoal.Controls.Add(pictureBox1);
@@ -197,10 +225,10 @@
             automatedTourOperatourFutureGoal.Controls.Add(airplaneFlightPassengerSeatCountTextBox);
             automatedTourOperatourFutureGoal.Controls.Add(insertBudget);
             automatedTourOperatourFutureGoal.Controls.Add(budgetValueTextBox);
-            automatedTourOperatourFutureGoal.Controls.Add(panel4);
             automatedTourOperatourFutureGoal.Controls.Add(panel3);
             automatedTourOperatourFutureGoal.Controls.Add(panel2);
             automatedTourOperatourFutureGoal.Controls.Add(exitButton);
+            automatedTourOperatourFutureGoal.Controls.Add(panel4);
             automatedTourOperatourFutureGoal.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             automatedTourOperatourFutureGoal.ForeColor = Color.FromArgb(64, 0, 64);
             automatedTourOperatourFutureGoal.Location = new Point(4, 24);
@@ -210,9 +238,85 @@
             automatedTourOperatourFutureGoal.TabIndex = 0;
             automatedTourOperatourFutureGoal.Text = "eTours";
             // 
+            // mathTestingButton
+            // 
+            mathTestingButton.Location = new Point(657, 12);
+            mathTestingButton.Name = "mathTestingButton";
+            mathTestingButton.Size = new Size(137, 23);
+            mathTestingButton.TabIndex = 37;
+            mathTestingButton.Text = "What is the Math";
+            mathTestingButton.UseVisualStyleBackColor = true;
+            mathTestingButton.Click += mathTestingButton_Click;
+            // 
+            // clearButton2ND
+            // 
+            clearButton2ND.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            clearButton2ND.ForeColor = Color.FromArgb(64, 0, 64);
+            clearButton2ND.Location = new Point(215, 260);
+            clearButton2ND.Name = "clearButton2ND";
+            clearButton2ND.Size = new Size(132, 23);
+            clearButton2ND.TabIndex = 20;
+            clearButton2ND.Text = "Clear Sector";
+            clearButton2ND.UseVisualStyleBackColor = true;
+            clearButton2ND.Click += button1_Click;
+            // 
+            // clearButton
+            // 
+            clearButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            clearButton.ForeColor = Color.FromArgb(64, 0, 64);
+            clearButton.Location = new Point(215, 140);
+            clearButton.Name = "clearButton";
+            clearButton.Size = new Size(132, 23);
+            clearButton.TabIndex = 19;
+            clearButton.Text = "Clear Sector";
+            clearButton.UseVisualStyleBackColor = true;
+            clearButton.Click += clearButton_Click;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(970, 206);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(100, 22);
+            textBox2.TabIndex = 36;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(1018, 181);
+            label6.Name = "label6";
+            label6.Size = new Size(48, 14);
+            label6.TabIndex = 35;
+            label6.Text = "label6";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(973, 145);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 22);
+            textBox1.TabIndex = 34;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(1028, 120);
+            label5.Name = "label5";
+            label5.Size = new Size(48, 14);
+            label5.TabIndex = 33;
+            label5.Text = "label5";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.airbus_a320;
+            pictureBox2.Location = new Point(1091, 100);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(238, 278);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 32;
+            pictureBox2.TabStop = false;
+            // 
             // displayAirlineFaresRepeatedly
             // 
-            displayAirlineFaresRepeatedly.Location = new Point(587, 637);
+            displayAirlineFaresRepeatedly.Location = new Point(766, 638);
             displayAirlineFaresRepeatedly.Name = "displayAirlineFaresRepeatedly";
             displayAirlineFaresRepeatedly.Size = new Size(70, 23);
             displayAirlineFaresRepeatedly.TabIndex = 22;
@@ -222,11 +326,11 @@
             // 
             // refreshPriceDataType
             // 
-            refreshPriceDataType.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            refreshPriceDataType.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             refreshPriceDataType.ForeColor = Color.FromArgb(64, 0, 64);
-            refreshPriceDataType.Location = new Point(657, 637);
+            refreshPriceDataType.Location = new Point(696, 636);
             refreshPriceDataType.Name = "refreshPriceDataType";
-            refreshPriceDataType.Size = new Size(60, 25);
+            refreshPriceDataType.Size = new Size(68, 25);
             refreshPriceDataType.TabIndex = 25;
             refreshPriceDataType.Text = "Refresh";
             refreshPriceDataType.UseVisualStyleBackColor = true;
@@ -234,24 +338,24 @@
             // 
             // outputResetValuesListBox1
             // 
-            outputResetValuesListBox1.Controls.Add(tabPage10);
-            outputResetValuesListBox1.Controls.Add(tabPage11);
+            outputResetValuesListBox1.Controls.Add(resetPrices);
+            outputResetValuesListBox1.Controls.Add(advantageOfThreePaxFigures);
             outputResetValuesListBox1.Location = new Point(584, 509);
             outputResetValuesListBox1.Name = "outputResetValuesListBox1";
             outputResetValuesListBox1.SelectedIndex = 0;
-            outputResetValuesListBox1.Size = new Size(237, 127);
+            outputResetValuesListBox1.Size = new Size(353, 127);
             outputResetValuesListBox1.TabIndex = 31;
             // 
-            // tabPage10
+            // resetPrices
             // 
-            tabPage10.Controls.Add(outputResetValuesListBox);
-            tabPage10.Location = new Point(4, 23);
-            tabPage10.Name = "tabPage10";
-            tabPage10.Padding = new Padding(3);
-            tabPage10.Size = new Size(229, 100);
-            tabPage10.TabIndex = 0;
-            tabPage10.Text = "tabPage10";
-            tabPage10.UseVisualStyleBackColor = true;
+            resetPrices.Controls.Add(outputResetValuesListBox);
+            resetPrices.Location = new Point(4, 23);
+            resetPrices.Name = "resetPrices";
+            resetPrices.Padding = new Padding(3);
+            resetPrices.Size = new Size(345, 100);
+            resetPrices.TabIndex = 0;
+            resetPrices.Text = "Reset Prices";
+            resetPrices.UseVisualStyleBackColor = true;
             // 
             // outputResetValuesListBox
             // 
@@ -260,20 +364,20 @@
             outputResetValuesListBox.ItemHeight = 14;
             outputResetValuesListBox.Location = new Point(-4, -1);
             outputResetValuesListBox.Name = "outputResetValuesListBox";
-            outputResetValuesListBox.Size = new Size(245, 102);
+            outputResetValuesListBox.Size = new Size(352, 102);
             outputResetValuesListBox.TabIndex = 26;
             outputResetValuesListBox.Tag = "";
             // 
-            // tabPage11
+            // advantageOfThreePaxFigures
             // 
-            tabPage11.Controls.Add(forLoopListBox);
-            tabPage11.Location = new Point(4, 23);
-            tabPage11.Name = "tabPage11";
-            tabPage11.Padding = new Padding(3);
-            tabPage11.Size = new Size(229, 100);
-            tabPage11.TabIndex = 1;
-            tabPage11.Text = "tabPage11";
-            tabPage11.UseVisualStyleBackColor = true;
+            advantageOfThreePaxFigures.Controls.Add(forLoopListBox);
+            advantageOfThreePaxFigures.Location = new Point(4, 23);
+            advantageOfThreePaxFigures.Name = "advantageOfThreePaxFigures";
+            advantageOfThreePaxFigures.Padding = new Padding(3);
+            advantageOfThreePaxFigures.Size = new Size(345, 100);
+            advantageOfThreePaxFigures.TabIndex = 1;
+            advantageOfThreePaxFigures.Text = "Accumulated Points";
+            advantageOfThreePaxFigures.UseVisualStyleBackColor = true;
             // 
             // forLoopListBox
             // 
@@ -284,19 +388,19 @@
             forLoopListBox.Size = new Size(226, 88);
             forLoopListBox.TabIndex = 1;
             // 
-            // tabControl1
+            // weeklyPlanner
             // 
-            tabControl1.Controls.Add(touristIdentification);
-            tabControl1.Controls.Add(tabPage5);
-            tabControl1.Controls.Add(tabPage6);
-            tabControl1.Controls.Add(tabPage7);
-            tabControl1.Controls.Add(tabPage8);
-            tabControl1.Controls.Add(tabPage9);
-            tabControl1.Location = new Point(847, 392);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(486, 268);
-            tabControl1.TabIndex = 30;
+            weeklyPlanner.Controls.Add(touristIdentification);
+            weeklyPlanner.Controls.Add(weeklyPlannerTabPage);
+            weeklyPlanner.Controls.Add(accumulatedBalance);
+            weeklyPlanner.Controls.Add(creditPointsToMileage);
+            weeklyPlanner.Controls.Add(tabPage8);
+            weeklyPlanner.Controls.Add(tabPage9);
+            weeklyPlanner.Location = new Point(954, 412);
+            weeklyPlanner.Name = "weeklyPlanner";
+            weeklyPlanner.SelectedIndex = 0;
+            weeklyPlanner.Size = new Size(380, 244);
+            weeklyPlanner.TabIndex = 30;
             // 
             // touristIdentification
             // 
@@ -322,18 +426,57 @@
             touristIdentification.Location = new Point(4, 23);
             touristIdentification.Name = "touristIdentification";
             touristIdentification.Padding = new Padding(3);
-            touristIdentification.Size = new Size(478, 241);
+            touristIdentification.Size = new Size(372, 217);
             touristIdentification.TabIndex = 0;
             touristIdentification.Text = "Tourist Identification";
             touristIdentification.Click += touristIdentification_Click;
             // 
+            // passengerNameTextBox1
+            // 
+            passengerNameTextBox1.Location = new Point(188, 76);
+            passengerNameTextBox1.Multiline = true;
+            passengerNameTextBox1.Name = "passengerNameTextBox1";
+            passengerNameTextBox1.Size = new Size(172, 20);
+            passengerNameTextBox1.TabIndex = 42;
+            // 
+            // passengerNameTextBox6
+            // 
+            passengerNameTextBox6.Location = new Point(193, 145);
+            passengerNameTextBox6.Multiline = true;
+            passengerNameTextBox6.Name = "passengerNameTextBox6";
+            passengerNameTextBox6.Size = new Size(167, 20);
+            passengerNameTextBox6.TabIndex = 41;
+            // 
+            // passengerNameTextBox5
+            // 
+            passengerNameTextBox5.Location = new Point(193, 121);
+            passengerNameTextBox5.Multiline = true;
+            passengerNameTextBox5.Name = "passengerNameTextBox5";
+            passengerNameTextBox5.Size = new Size(167, 20);
+            passengerNameTextBox5.TabIndex = 39;
+            // 
+            // passengerNameTextBox4
+            // 
+            passengerNameTextBox4.Location = new Point(188, 99);
+            passengerNameTextBox4.Multiline = true;
+            passengerNameTextBox4.Name = "passengerNameTextBox4";
+            passengerNameTextBox4.Size = new Size(172, 20);
+            passengerNameTextBox4.TabIndex = 38;
+            // 
+            // passengerFirstName
+            // 
+            passengerFirstName.Location = new Point(188, 56);
+            passengerFirstName.Multiline = true;
+            passengerFirstName.Name = "passengerFirstName";
+            passengerFirstName.Size = new Size(172, 20);
+            passengerFirstName.TabIndex = 37;
+            // 
             // outputTouristIdentityLabel4
             // 
-            outputTouristIdentityLabel4.Location = new Point(369, 27);
+            outputTouristIdentityLabel4.Location = new Point(305, 28);
             outputTouristIdentityLabel4.Name = "outputTouristIdentityLabel4";
             outputTouristIdentityLabel4.Size = new Size(57, 14);
             outputTouristIdentityLabel4.TabIndex = 35;
-            outputTouristIdentityLabel4.Text = "label15";
             // 
             // passengerButton
             // 
@@ -358,40 +501,36 @@
             // 
             // outputTouristIdentityLabel3
             // 
-            outputTouristIdentityLabel3.Location = new Point(303, 28);
+            outputTouristIdentityLabel3.Location = new Point(246, 29);
             outputTouristIdentityLabel3.Name = "outputTouristIdentityLabel3";
             outputTouristIdentityLabel3.Size = new Size(57, 14);
             outputTouristIdentityLabel3.TabIndex = 34;
-            outputTouristIdentityLabel3.Text = "label15";
             // 
             // outputTouristIdentityLabel2
             // 
-            outputTouristIdentityLabel2.Location = new Point(240, 29);
+            outputTouristIdentityLabel2.Location = new Point(188, 29);
             outputTouristIdentityLabel2.Name = "outputTouristIdentityLabel2";
             outputTouristIdentityLabel2.Size = new Size(57, 14);
             outputTouristIdentityLabel2.TabIndex = 33;
-            outputTouristIdentityLabel2.Text = "label14";
             // 
             // outputTouristIdentityLabel1
             // 
-            outputTouristIdentityLabel1.Location = new Point(176, 30);
+            outputTouristIdentityLabel1.Location = new Point(130, 30);
             outputTouristIdentityLabel1.Name = "outputTouristIdentityLabel1";
             outputTouristIdentityLabel1.Size = new Size(57, 14);
             outputTouristIdentityLabel1.TabIndex = 32;
-            outputTouristIdentityLabel1.Text = "label12";
             // 
             // outputTouristIdentityLabel
             // 
-            outputTouristIdentityLabel.Location = new Point(60, 30);
+            outputTouristIdentityLabel.Location = new Point(13, 30);
             outputTouristIdentityLabel.Name = "outputTouristIdentityLabel";
             outputTouristIdentityLabel.Size = new Size(110, 14);
             outputTouristIdentityLabel.TabIndex = 10;
-            outputTouristIdentityLabel.Text = "label11";
             // 
             // tourismLabel10
             // 
             tourismLabel10.AutoSize = true;
-            tourismLabel10.Location = new Point(37, 145);
+            tourismLabel10.Location = new Point(23, 145);
             tourismLabel10.Name = "tourismLabel10";
             tourismLabel10.Size = new Size(152, 14);
             tourismLabel10.TabIndex = 4;
@@ -400,7 +539,7 @@
             // tourismLabel9
             // 
             tourismLabel9.AutoSize = true;
-            tourismLabel9.Location = new Point(37, 122);
+            tourismLabel9.Location = new Point(22, 122);
             tourismLabel9.Name = "tourismLabel9";
             tourismLabel9.Size = new Size(165, 14);
             tourismLabel9.TabIndex = 3;
@@ -409,7 +548,7 @@
             // tourismLabel8
             // 
             tourismLabel8.AutoSize = true;
-            tourismLabel8.Location = new Point(37, 102);
+            tourismLabel8.Location = new Point(22, 101);
             tourismLabel8.Name = "tourismLabel8";
             tourismLabel8.Size = new Size(156, 14);
             tourismLabel8.TabIndex = 2;
@@ -418,7 +557,7 @@
             // tourismLabel7
             // 
             tourismLabel7.AutoSize = true;
-            tourismLabel7.Location = new Point(36, 78);
+            tourismLabel7.Location = new Point(20, 78);
             tourismLabel7.Name = "tourismLabel7";
             tourismLabel7.Size = new Size(170, 14);
             tourismLabel7.TabIndex = 1;
@@ -427,7 +566,7 @@
             // tourismLabel6
             // 
             tourismLabel6.AutoSize = true;
-            tourismLabel6.Location = new Point(37, 56);
+            tourismLabel6.Location = new Point(19, 56);
             tourismLabel6.Name = "tourismLabel6";
             tourismLabel6.Size = new Size(152, 14);
             tourismLabel6.TabIndex = 0;
@@ -436,48 +575,136 @@
             // oneStopTouristIdentity
             // 
             oneStopTouristIdentity.BackColor = Color.White;
-            oneStopTouristIdentity.Location = new Point(32, 14);
+            oneStopTouristIdentity.Location = new Point(8, 14);
             oneStopTouristIdentity.Name = "oneStopTouristIdentity";
-            oneStopTouristIdentity.Size = new Size(413, 34);
+            oneStopTouristIdentity.Size = new Size(358, 34);
             oneStopTouristIdentity.TabIndex = 9;
             oneStopTouristIdentity.Text = "One-Stop Tourist Identification";
             // 
-            // tabPage5
+            // weeklyPlannerTabPage
             // 
-            tabPage5.Location = new Point(4, 23);
-            tabPage5.Name = "tabPage5";
-            tabPage5.Padding = new Padding(3);
-            tabPage5.Size = new Size(478, 241);
-            tabPage5.TabIndex = 1;
-            tabPage5.Text = "tabPage5";
-            tabPage5.UseVisualStyleBackColor = true;
+            weeklyPlannerTabPage.Controls.Add(listBoxTasks);
+            weeklyPlannerTabPage.Controls.Add(addButton);
+            weeklyPlannerTabPage.Controls.Add(showTasksButton);
+            weeklyPlannerTabPage.Controls.Add(taskTextBox);
+            weeklyPlannerTabPage.Controls.Add(listBoxDays);
+            weeklyPlannerTabPage.Location = new Point(4, 23);
+            weeklyPlannerTabPage.Name = "weeklyPlannerTabPage";
+            weeklyPlannerTabPage.Padding = new Padding(3);
+            weeklyPlannerTabPage.Size = new Size(372, 217);
+            weeklyPlannerTabPage.TabIndex = 1;
+            weeklyPlannerTabPage.Text = "Monthly Travel Planner";
+            weeklyPlannerTabPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage6
+            // listBoxTasks
             // 
-            tabPage6.Location = new Point(4, 23);
-            tabPage6.Name = "tabPage6";
-            tabPage6.Padding = new Padding(3);
-            tabPage6.Size = new Size(478, 241);
-            tabPage6.TabIndex = 2;
-            tabPage6.Text = "tabPage6";
-            tabPage6.UseVisualStyleBackColor = true;
+            listBoxTasks.FormattingEnabled = true;
+            listBoxTasks.ItemHeight = 14;
+            listBoxTasks.Location = new Point(69, 37);
+            listBoxTasks.Name = "listBoxTasks";
+            listBoxTasks.Size = new Size(120, 88);
+            listBoxTasks.TabIndex = 4;
             // 
-            // tabPage7
+            // addButton
             // 
-            tabPage7.Location = new Point(4, 23);
-            tabPage7.Name = "tabPage7";
-            tabPage7.Padding = new Padding(3);
-            tabPage7.Size = new Size(478, 241);
-            tabPage7.TabIndex = 3;
-            tabPage7.Text = "tabPage7";
-            tabPage7.UseVisualStyleBackColor = true;
+            addButton.Location = new Point(115, 181);
+            addButton.Name = "addButton";
+            addButton.Size = new Size(75, 23);
+            addButton.TabIndex = 3;
+            addButton.Text = "Add";
+            addButton.UseVisualStyleBackColor = true;
+            // 
+            // showTasksButton
+            // 
+            showTasksButton.Location = new Point(314, 175);
+            showTasksButton.Name = "showTasksButton";
+            showTasksButton.Size = new Size(75, 23);
+            showTasksButton.TabIndex = 2;
+            showTasksButton.Text = "Show";
+            showTasksButton.UseVisualStyleBackColor = true;
+            // 
+            // taskTextBox
+            // 
+            taskTextBox.Location = new Point(217, 45);
+            taskTextBox.Name = "taskTextBox";
+            taskTextBox.Size = new Size(100, 22);
+            taskTextBox.TabIndex = 1;
+            // 
+            // listBoxDays
+            // 
+            listBoxDays.FormattingEnabled = true;
+            listBoxDays.ItemHeight = 14;
+            listBoxDays.Location = new Point(330, 35);
+            listBoxDays.Name = "listBoxDays";
+            listBoxDays.Size = new Size(120, 88);
+            listBoxDays.TabIndex = 0;
+            // 
+            // accumulatedBalance
+            // 
+            accumulatedBalance.BackColor = Color.FromArgb(192, 255, 192);
+            accumulatedBalance.Controls.Add(label4);
+            accumulatedBalance.Controls.Add(label3);
+            accumulatedBalance.Controls.Add(label2);
+            accumulatedBalance.Controls.Add(label1);
+            accumulatedBalance.Location = new Point(4, 23);
+            accumulatedBalance.Name = "accumulatedBalance";
+            accumulatedBalance.Padding = new Padding(3);
+            accumulatedBalance.Size = new Size(372, 217);
+            accumulatedBalance.TabIndex = 2;
+            accumulatedBalance.Text = "Mileage";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(24, 110);
+            label4.Name = "label4";
+            label4.Size = new Size(48, 14);
+            label4.TabIndex = 3;
+            label4.Text = "label4";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(24, 82);
+            label3.Name = "label3";
+            label3.Size = new Size(48, 14);
+            label3.TabIndex = 2;
+            label3.Text = "label3";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(22, 50);
+            label2.Name = "label2";
+            label2.Size = new Size(48, 14);
+            label2.TabIndex = 1;
+            label2.Text = "label2";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(24, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(48, 14);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
+            // 
+            // creditPointsToMileage
+            // 
+            creditPointsToMileage.Location = new Point(4, 23);
+            creditPointsToMileage.Name = "creditPointsToMileage";
+            creditPointsToMileage.Padding = new Padding(3);
+            creditPointsToMileage.Size = new Size(372, 217);
+            creditPointsToMileage.TabIndex = 3;
+            creditPointsToMileage.Text = "Credit Point to Mileager";
+            creditPointsToMileage.UseVisualStyleBackColor = true;
             // 
             // tabPage8
             // 
             tabPage8.Location = new Point(4, 23);
             tabPage8.Name = "tabPage8";
             tabPage8.Padding = new Padding(3);
-            tabPage8.Size = new Size(478, 241);
+            tabPage8.Size = new Size(372, 217);
             tabPage8.TabIndex = 4;
             tabPage8.Text = "tabPage8";
             tabPage8.UseVisualStyleBackColor = true;
@@ -487,7 +714,7 @@
             tabPage9.Location = new Point(4, 23);
             tabPage9.Name = "tabPage9";
             tabPage9.Padding = new Padding(3);
-            tabPage9.Size = new Size(478, 241);
+            tabPage9.Size = new Size(372, 217);
             tabPage9.TabIndex = 5;
             tabPage9.Text = "tabPage9";
             tabPage9.UseVisualStyleBackColor = true;
@@ -495,7 +722,7 @@
             // sigthSeeingSelectionColorControl
             // 
             sigthSeeingSelectionColorControl.AutoSize = true;
-            sigthSeeingSelectionColorControl.Location = new Point(804, 365);
+            sigthSeeingSelectionColorControl.Location = new Point(919, 365);
             sigthSeeingSelectionColorControl.Name = "sigthSeeingSelectionColorControl";
             sigthSeeingSelectionColorControl.Size = new Size(14, 13);
             sigthSeeingSelectionColorControl.TabIndex = 29;
@@ -506,7 +733,7 @@
             // lodgingSelectionColorControl
             // 
             lodgingSelectionColorControl.AutoSize = true;
-            lodgingSelectionColorControl.Location = new Point(806, 250);
+            lodgingSelectionColorControl.Location = new Point(916, 250);
             lodgingSelectionColorControl.Name = "lodgingSelectionColorControl";
             lodgingSelectionColorControl.Size = new Size(14, 13);
             lodgingSelectionColorControl.TabIndex = 28;
@@ -517,9 +744,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.tourists1;
-            pictureBox1.Location = new Point(911, 43);
+            pictureBox1.Location = new Point(1091, 22);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(385, 97);
+            pictureBox1.Size = new Size(237, 71);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 26;
             pictureBox1.TabStop = false;
@@ -527,7 +754,7 @@
             // airlineSelectionColorControl
             // 
             airlineSelectionColorControl.AutoSize = true;
-            airlineSelectionColorControl.Location = new Point(808, 130);
+            airlineSelectionColorControl.Location = new Point(915, 130);
             airlineSelectionColorControl.Name = "airlineSelectionColorControl";
             airlineSelectionColorControl.Size = new Size(14, 13);
             airlineSelectionColorControl.TabIndex = 25;
@@ -669,7 +896,7 @@
             combinedPricingLabel.Name = "combinedPricingLabel";
             combinedPricingLabel.Size = new Size(216, 23);
             combinedPricingLabel.TabIndex = 1;
-            combinedPricingLabel.Text = "Combined Price";
+            combinedPricingLabel.Text = "Combined Price per Pax";
             combinedPricingLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // ticketReferenceLabel
@@ -687,9 +914,9 @@
             // 
             // panel5
             // 
+            panel5.Controls.Add(automatedRestaurnatsBookingListBox);
             panel5.Controls.Add(restaurantsSelectionColorControl);
             panel5.Controls.Add(outputBudgetToFitLabel4);
-            panel5.Controls.Add(outputBookedRestaurantSeatsLabel);
             panel5.Controls.Add(restaurantPictureBox);
             panel5.Controls.Add(tourismLabel4);
             panel5.Controls.Add(goButtonWhileLoop4);
@@ -703,13 +930,22 @@
             panel5.Controls.Add(outputCopiedPaxIntegerLabel5);
             panel5.Location = new Point(27, 392);
             panel5.Name = "panel5";
-            panel5.Size = new Size(802, 111);
+            panel5.Size = new Size(910, 111);
             panel5.TabIndex = 22;
+            // 
+            // automatedRestaurnatsBookingListBox
+            // 
+            automatedRestaurnatsBookingListBox.FormattingEnabled = true;
+            automatedRestaurnatsBookingListBox.ItemHeight = 14;
+            automatedRestaurnatsBookingListBox.Location = new Point(466, 6);
+            automatedRestaurnatsBookingListBox.Name = "automatedRestaurnatsBookingListBox";
+            automatedRestaurnatsBookingListBox.Size = new Size(305, 88);
+            automatedRestaurnatsBookingListBox.TabIndex = 31;
             // 
             // restaurantsSelectionColorControl
             // 
             restaurantsSelectionColorControl.AutoSize = true;
-            restaurantsSelectionColorControl.Location = new Point(779, 86);
+            restaurantsSelectionColorControl.Location = new Point(895, 86);
             restaurantsSelectionColorControl.Name = "restaurantsSelectionColorControl";
             restaurantsSelectionColorControl.Size = new Size(14, 13);
             restaurantsSelectionColorControl.TabIndex = 30;
@@ -725,20 +961,10 @@
             outputBudgetToFitLabel4.Size = new Size(172, 23);
             outputBudgetToFitLabel4.TabIndex = 13;
             // 
-            // outputBookedRestaurantSeatsLabel
-            // 
-            outputBookedRestaurantSeatsLabel.FormattingEnabled = true;
-            outputBookedRestaurantSeatsLabel.ItemHeight = 14;
-            outputBookedRestaurantSeatsLabel.Items.AddRange(new object[] { "Booked Restaurants PreSeats " });
-            outputBookedRestaurantSeatsLabel.Location = new Point(325, 6);
-            outputBookedRestaurantSeatsLabel.Name = "outputBookedRestaurantSeatsLabel";
-            outputBookedRestaurantSeatsLabel.Size = new Size(135, 88);
-            outputBookedRestaurantSeatsLabel.TabIndex = 11;
-            // 
             // restaurantPictureBox
             // 
             restaurantPictureBox.Image = Properties.Resources._20200111_041409492_iOS;
-            restaurantPictureBox.Location = new Point(667, 6);
+            restaurantPictureBox.Location = new Point(783, 6);
             restaurantPictureBox.Name = "restaurantPictureBox";
             restaurantPictureBox.Size = new Size(120, 93);
             restaurantPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -761,9 +987,10 @@
             goButtonWhileLoop4.Name = "goButtonWhileLoop4";
             goButtonWhileLoop4.Size = new Size(177, 23);
             goButtonWhileLoop4.TabIndex = 3;
-            goButtonWhileLoop4.Text = "Repeat Price";
+            goButtonWhileLoop4.Text = "Repeat Price to fit Pax";
             goButtonWhileLoop4.TextAlign = ContentAlignment.MiddleLeft;
             goButtonWhileLoop4.UseVisualStyleBackColor = true;
+            goButtonWhileLoop4.Click += goButtonWhileLoop4_Click;
             // 
             // comparePriceAndBudgetMatch4
             // 
@@ -774,6 +1001,7 @@
             comparePriceAndBudgetMatch4.Text = "Compare Budget";
             comparePriceAndBudgetMatch4.TextAlign = ContentAlignment.MiddleLeft;
             comparePriceAndBudgetMatch4.UseVisualStyleBackColor = true;
+            comparePriceAndBudgetMatch4.Click += comparePriceAndBudgetMatch4_Click;
             // 
             // getRestaurantPriceButton
             // 
@@ -799,9 +1027,9 @@
             restaurantsPricesListBox.FormattingEnabled = true;
             restaurantsPricesListBox.ItemHeight = 14;
             restaurantsPricesListBox.Items.AddRange(new object[] { "PF Chang's", "Ben's Chilli Bowl: Washignton DC location" });
-            restaurantsPricesListBox.Location = new Point(464, 6);
+            restaurantsPricesListBox.Location = new Point(326, 6);
             restaurantsPricesListBox.Name = "restaurantsPricesListBox";
-            restaurantsPricesListBox.Size = new Size(195, 88);
+            restaurantsPricesListBox.Size = new Size(134, 88);
             restaurantsPricesListBox.TabIndex = 2;
             // 
             // priceOfRestaurantLabel
@@ -849,9 +1077,9 @@
             // clearButton3RD
             // 
             clearButton3RD.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            clearButton3RD.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            clearButton3RD.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             clearButton3RD.ForeColor = Color.FromArgb(64, 0, 64);
-            clearButton3RD.Location = new Point(716, 637);
+            clearButton3RD.Location = new Point(836, 637);
             clearButton3RD.Name = "clearButton3RD";
             clearButton3RD.Size = new Size(50, 25);
             clearButton3RD.TabIndex = 21;
@@ -896,158 +1124,9 @@
             budgetValueTextBox.Size = new Size(128, 23);
             budgetValueTextBox.TabIndex = 15;
             // 
-            // panel4
-            // 
-            panel4.Controls.Add(outputBudgetToFitLabel3);
-            panel4.Controls.Add(outputBookedSightSeeingGatesLabel);
-            panel4.Controls.Add(sightseeingPictureBox);
-            panel4.Controls.Add(tourismLabel3);
-            panel4.Controls.Add(goButtonWhileLoop3);
-            panel4.Controls.Add(comparePriceAndBudgetMatch3);
-            panel4.Controls.Add(getPriceFromAnnouncedSiteListPriceButton);
-            panel4.Controls.Add(outputifOnlyOneTourOptionListed);
-            panel4.Controls.Add(siteSeeingFaresListBox);
-            panel4.Controls.Add(priceOfSiteseeingLabel);
-            panel4.Controls.Add(numberOfPaxLabel3);
-            panel4.Controls.Add(outputLabelFareOnThisTouristSite);
-            panel4.Controls.Add(outputCopiedPaxIntegerLabel3);
-            panel4.Location = new Point(27, 278);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(802, 111);
-            panel4.TabIndex = 14;
-            // 
-            // outputBudgetToFitLabel3
-            // 
-            outputBudgetToFitLabel3.BackColor = Color.White;
-            outputBudgetToFitLabel3.Location = new Point(15, 75);
-            outputBudgetToFitLabel3.Name = "outputBudgetToFitLabel3";
-            outputBudgetToFitLabel3.Size = new Size(172, 23);
-            outputBudgetToFitLabel3.TabIndex = 13;
-            // 
-            // outputBookedSightSeeingGatesLabel
-            // 
-            outputBookedSightSeeingGatesLabel.FormattingEnabled = true;
-            outputBookedSightSeeingGatesLabel.ItemHeight = 14;
-            outputBookedSightSeeingGatesLabel.Items.AddRange(new object[] { "Tour Tides SiteSeeing in Selected Destination Market" });
-            outputBookedSightSeeingGatesLabel.Location = new Point(325, 8);
-            outputBookedSightSeeingGatesLabel.Name = "outputBookedSightSeeingGatesLabel";
-            outputBookedSightSeeingGatesLabel.Size = new Size(135, 88);
-            outputBookedSightSeeingGatesLabel.TabIndex = 11;
-            // 
-            // sightseeingPictureBox
-            // 
-            sightseeingPictureBox.Image = Properties.Resources._20200103_184446279_iOS;
-            sightseeingPictureBox.Location = new Point(667, 6);
-            sightseeingPictureBox.Name = "sightseeingPictureBox";
-            sightseeingPictureBox.Size = new Size(120, 93);
-            sightseeingPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            sightseeingPictureBox.TabIndex = 10;
-            sightseeingPictureBox.TabStop = false;
-            // 
-            // tourismLabel3
-            // 
-            tourismLabel3.BackColor = Color.White;
-            tourismLabel3.Location = new Point(12, 7);
-            tourismLabel3.Name = "tourismLabel3";
-            tourismLabel3.Size = new Size(175, 23);
-            tourismLabel3.TabIndex = 0;
-            tourismLabel3.Text = "Automated Sightseeing Gate Accesses";
-            tourismLabel3.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // goButtonWhileLoop3
-            // 
-            goButtonWhileLoop3.Location = new Point(10, 29);
-            goButtonWhileLoop3.Name = "goButtonWhileLoop3";
-            goButtonWhileLoop3.Size = new Size(177, 23);
-            goButtonWhileLoop3.TabIndex = 3;
-            goButtonWhileLoop3.Text = "Repeat Price";
-            goButtonWhileLoop3.TextAlign = ContentAlignment.MiddleLeft;
-            goButtonWhileLoop3.UseVisualStyleBackColor = true;
-            // 
-            // comparePriceAndBudgetMatch3
-            // 
-            comparePriceAndBudgetMatch3.Location = new Point(11, 50);
-            comparePriceAndBudgetMatch3.Name = "comparePriceAndBudgetMatch3";
-            comparePriceAndBudgetMatch3.Size = new Size(177, 23);
-            comparePriceAndBudgetMatch3.TabIndex = 4;
-            comparePriceAndBudgetMatch3.Text = "Compare Budget";
-            comparePriceAndBudgetMatch3.TextAlign = ContentAlignment.MiddleLeft;
-            comparePriceAndBudgetMatch3.UseVisualStyleBackColor = true;
-            // 
-            // getPriceFromAnnouncedSiteListPriceButton
-            // 
-            getPriceFromAnnouncedSiteListPriceButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            getPriceFromAnnouncedSiteListPriceButton.Location = new Point(187, 76);
-            getPriceFromAnnouncedSiteListPriceButton.Name = "getPriceFromAnnouncedSiteListPriceButton";
-            getPriceFromAnnouncedSiteListPriceButton.Size = new Size(132, 23);
-            getPriceFromAnnouncedSiteListPriceButton.TabIndex = 9;
-            getPriceFromAnnouncedSiteListPriceButton.Text = "Get the Price Rate";
-            getPriceFromAnnouncedSiteListPriceButton.UseVisualStyleBackColor = true;
-            getPriceFromAnnouncedSiteListPriceButton.Click += getPriceFromAnnouncedSiteListPriceButton_Click;
-            // 
-            // outputifOnlyOneTourOptionListed
-            // 
-            outputifOnlyOneTourOptionListed.BackColor = Color.White;
-            outputifOnlyOneTourOptionListed.Location = new Point(190, 7);
-            outputifOnlyOneTourOptionListed.Name = "outputifOnlyOneTourOptionListed";
-            outputifOnlyOneTourOptionListed.Size = new Size(128, 20);
-            outputifOnlyOneTourOptionListed.TabIndex = 1;
-            // 
-            // siteSeeingFaresListBox
-            // 
-            siteSeeingFaresListBox.FormattingEnabled = true;
-            siteSeeingFaresListBox.ItemHeight = 14;
-            siteSeeingFaresListBox.Items.AddRange(new object[] { "eTours Tides Tourism Attraction, Mont Saint, Michel: France: Airport Paris-Charles De Gaulle (CDG)", "eTours Tides Tourism AttractionMont Saint, Michel Bay: Canada: Airport Montreal Mirabel Intl Apt (YMX)", "eTour Onboard Water Sports via Ships Attraction, Seabourn Odyssey: Point of Sail Western Mediterranean Cruise", "eTour Onboard Water Sports via Ships Attraction, Oasis of the Sea: Point of Sail Western Mediterranean Cruise" });
-            siteSeeingFaresListBox.Location = new Point(464, 8);
-            siteSeeingFaresListBox.Name = "siteSeeingFaresListBox";
-            siteSeeingFaresListBox.Size = new Size(195, 88);
-            siteSeeingFaresListBox.TabIndex = 2;
-            // 
-            // priceOfSiteseeingLabel
-            // 
-            priceOfSiteseeingLabel.BackColor = Color.FromArgb(192, 255, 192);
-            priceOfSiteseeingLabel.BorderStyle = BorderStyle.Fixed3D;
-            priceOfSiteseeingLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            priceOfSiteseeingLabel.ForeColor = Color.FromArgb(64, 0, 64);
-            priceOfSiteseeingLabel.Location = new Point(263, 54);
-            priceOfSiteseeingLabel.Name = "priceOfSiteseeingLabel";
-            priceOfSiteseeingLabel.Size = new Size(50, 17);
-            priceOfSiteseeingLabel.TabIndex = 7;
-            priceOfSiteseeingLabel.Text = "PRICE";
-            priceOfSiteseeingLabel.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // numberOfPaxLabel3
-            // 
-            numberOfPaxLabel3.BackColor = Color.FromArgb(192, 255, 192);
-            numberOfPaxLabel3.BorderStyle = BorderStyle.Fixed3D;
-            numberOfPaxLabel3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            numberOfPaxLabel3.ForeColor = Color.FromArgb(64, 0, 64);
-            numberOfPaxLabel3.Location = new Point(264, 32);
-            numberOfPaxLabel3.Name = "numberOfPaxLabel3";
-            numberOfPaxLabel3.Size = new Size(50, 17);
-            numberOfPaxLabel3.TabIndex = 5;
-            numberOfPaxLabel3.Text = "PAX";
-            numberOfPaxLabel3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // outputLabelFareOnThisTouristSite
-            // 
-            outputLabelFareOnThisTouristSite.BackColor = Color.White;
-            outputLabelFareOnThisTouristSite.Location = new Point(189, 52);
-            outputLabelFareOnThisTouristSite.Name = "outputLabelFareOnThisTouristSite";
-            outputLabelFareOnThisTouristSite.Size = new Size(130, 20);
-            outputLabelFareOnThisTouristSite.TabIndex = 8;
-            // 
-            // outputCopiedPaxIntegerLabel3
-            // 
-            outputCopiedPaxIntegerLabel3.BackColor = Color.White;
-            outputCopiedPaxIntegerLabel3.Location = new Point(190, 30);
-            outputCopiedPaxIntegerLabel3.Name = "outputCopiedPaxIntegerLabel3";
-            outputCopiedPaxIntegerLabel3.Size = new Size(129, 20);
-            outputCopiedPaxIntegerLabel3.TabIndex = 6;
-            // 
             // panel3
             // 
-            panel3.Controls.Add(clearButton2ND);
+            panel3.Controls.Add(lodgingFaresListBox);
             panel3.Controls.Add(lodgingPictureBox);
             panel3.Controls.Add(outputBudgetToFitLabel2);
             panel3.Controls.Add(tourismLabel2);
@@ -1062,25 +1141,22 @@
             panel3.Controls.Add(outputCopiedPaxIntegerLabel2);
             panel3.Location = new Point(27, 161);
             panel3.Name = "panel3";
-            panel3.Size = new Size(802, 111);
+            panel3.Size = new Size(910, 111);
             panel3.TabIndex = 13;
             // 
-            // clearButton2ND
+            // lodgingFaresListBox
             // 
-            clearButton2ND.Font = new Font("Segoe UI", 7F, FontStyle.Bold);
-            clearButton2ND.ForeColor = Color.FromArgb(64, 0, 64);
-            clearButton2ND.Location = new Point(708, 10);
-            clearButton2ND.Name = "clearButton2ND";
-            clearButton2ND.Size = new Size(79, 20);
-            clearButton2ND.TabIndex = 20;
-            clearButton2ND.Text = "Clear Sector";
-            clearButton2ND.UseVisualStyleBackColor = true;
-            clearButton2ND.Click += button1_Click;
+            lodgingFaresListBox.FormattingEnabled = true;
+            lodgingFaresListBox.ItemHeight = 14;
+            lodgingFaresListBox.Location = new Point(466, 9);
+            lodgingFaresListBox.Name = "lodgingFaresListBox";
+            lodgingFaresListBox.Size = new Size(305, 88);
+            lodgingFaresListBox.TabIndex = 14;
             // 
             // lodgingPictureBox
             // 
             lodgingPictureBox.Image = Properties.Resources.room_picture;
-            lodgingPictureBox.Location = new Point(669, 9);
+            lodgingPictureBox.Location = new Point(778, 9);
             lodgingPictureBox.Name = "lodgingPictureBox";
             lodgingPictureBox.Size = new Size(120, 90);
             lodgingPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1111,9 +1187,10 @@
             goButtonWhileLoop2.Name = "goButtonWhileLoop2";
             goButtonWhileLoop2.Size = new Size(177, 23);
             goButtonWhileLoop2.TabIndex = 3;
-            goButtonWhileLoop2.Text = "Repeat Price";
+            goButtonWhileLoop2.Text = "Repeat Price to Fit Pax";
             goButtonWhileLoop2.TextAlign = ContentAlignment.MiddleLeft;
             goButtonWhileLoop2.UseVisualStyleBackColor = true;
+            goButtonWhileLoop2.Click += goButtonWhileLoop2_Click;
             // 
             // comparePriceAndBudgetMatch2
             // 
@@ -1124,6 +1201,7 @@
             comparePriceAndBudgetMatch2.Text = "Compare Budget";
             comparePriceAndBudgetMatch2.TextAlign = ContentAlignment.MiddleLeft;
             comparePriceAndBudgetMatch2.UseVisualStyleBackColor = true;
+            comparePriceAndBudgetMatch2.Click += comparePriceAndBudgetMatch2_Click;
             // 
             // getPriceFromAnnouncedListPrice
             // 
@@ -1151,7 +1229,7 @@
             roomsFaresListBox.Items.AddRange(new object[] { "Accor ", "Aman Resorts", "Marriott International", "Hilton ", "Hyatt Hotel", "Wyndham Lodging", "Hyatt Hotel", "Ritz-Carlton Hotel" });
             roomsFaresListBox.Location = new Point(324, 10);
             roomsFaresListBox.Name = "roomsFaresListBox";
-            roomsFaresListBox.Size = new Size(336, 88);
+            roomsFaresListBox.Size = new Size(136, 88);
             roomsFaresListBox.TabIndex = 2;
             // 
             // priceOfRoomLabel2
@@ -1198,7 +1276,7 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(clearButton);
+            panel2.Controls.Add(airlineFaresListBox2);
             panel2.Controls.Add(outputBudgetToFitLabel);
             panel2.Controls.Add(airplanePictureBox);
             panel2.Controls.Add(tourismLabel1);
@@ -1213,20 +1291,17 @@
             panel2.Controls.Add(outputCopiedPaxIntegerLabel1);
             panel2.Location = new Point(27, 41);
             panel2.Name = "panel2";
-            panel2.Size = new Size(802, 111);
+            panel2.Size = new Size(910, 111);
             panel2.TabIndex = 12;
             // 
-            // clearButton
+            // airlineFaresListBox2
             // 
-            clearButton.Font = new Font("Segoe UI", 7F, FontStyle.Bold);
-            clearButton.ForeColor = Color.FromArgb(64, 0, 64);
-            clearButton.Location = new Point(708, 9);
-            clearButton.Name = "clearButton";
-            clearButton.Size = new Size(79, 20);
-            clearButton.TabIndex = 19;
-            clearButton.Text = "Clear Sector";
-            clearButton.UseVisualStyleBackColor = true;
-            clearButton.Click += clearButton_Click;
+            airlineFaresListBox2.FormattingEnabled = true;
+            airlineFaresListBox2.ItemHeight = 14;
+            airlineFaresListBox2.Location = new Point(464, 7);
+            airlineFaresListBox2.Name = "airlineFaresListBox2";
+            airlineFaresListBox2.Size = new Size(307, 88);
+            airlineFaresListBox2.TabIndex = 12;
             // 
             // outputBudgetToFitLabel
             // 
@@ -1239,7 +1314,7 @@
             // airplanePictureBox
             // 
             airplanePictureBox.Image = Properties.Resources.patent_picture;
-            airplanePictureBox.Location = new Point(670, 7);
+            airplanePictureBox.Location = new Point(777, 6);
             airplanePictureBox.Name = "airplanePictureBox";
             airplanePictureBox.Size = new Size(120, 93);
             airplanePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1262,9 +1337,10 @@
             goButtonWhileLoop.Name = "goButtonWhileLoop";
             goButtonWhileLoop.Size = new Size(177, 23);
             goButtonWhileLoop.TabIndex = 3;
-            goButtonWhileLoop.Text = "Repeat Price";
+            goButtonWhileLoop.Text = "Repeat Price to fit Pax";
             goButtonWhileLoop.TextAlign = ContentAlignment.MiddleLeft;
             goButtonWhileLoop.UseVisualStyleBackColor = true;
+            goButtonWhileLoop.Click += goButtonWhileLoop_Click;
             // 
             // comparePriceAndBudgetMatch
             // 
@@ -1291,9 +1367,9 @@
             // outputLabelAirlineName
             // 
             outputLabelAirlineName.BackColor = Color.White;
-            outputLabelAirlineName.Location = new Point(190, 7);
+            outputLabelAirlineName.Location = new Point(190, 8);
             outputLabelAirlineName.Name = "outputLabelAirlineName";
-            outputLabelAirlineName.Size = new Size(128, 20);
+            outputLabelAirlineName.Size = new Size(130, 20);
             outputLabelAirlineName.TabIndex = 1;
             // 
             // airLineFaresListBox
@@ -1303,7 +1379,7 @@
             airLineFaresListBox.Items.AddRange(new object[] { "Air (2I)    ", "40-Mile Air (Q5)    ", "Air Co (AQ)", "Advanced Air (AN)", "Aegean Airlines (A3)", "Aer Lingus (EI)" });
             airLineFaresListBox.Location = new Point(324, 8);
             airLineFaresListBox.Name = "airLineFaresListBox";
-            airLineFaresListBox.Size = new Size(335, 88);
+            airLineFaresListBox.Size = new Size(136, 88);
             airLineFaresListBox.TabIndex = 2;
             // 
             // priceOfFlightLabel
@@ -1312,7 +1388,7 @@
             priceOfFlightLabel.BorderStyle = BorderStyle.Fixed3D;
             priceOfFlightLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             priceOfFlightLabel.ForeColor = Color.FromArgb(64, 0, 64);
-            priceOfFlightLabel.Location = new Point(263, 54);
+            priceOfFlightLabel.Location = new Point(266, 54);
             priceOfFlightLabel.Name = "priceOfFlightLabel";
             priceOfFlightLabel.Size = new Size(50, 17);
             priceOfFlightLabel.TabIndex = 7;
@@ -1325,7 +1401,7 @@
             numberOfPaxLabel.BorderStyle = BorderStyle.Fixed3D;
             numberOfPaxLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             numberOfPaxLabel.ForeColor = Color.FromArgb(64, 0, 64);
-            numberOfPaxLabel.Location = new Point(264, 32);
+            numberOfPaxLabel.Location = new Point(266, 32);
             numberOfPaxLabel.Name = "numberOfPaxLabel";
             numberOfPaxLabel.Size = new Size(50, 17);
             numberOfPaxLabel.TabIndex = 5;
@@ -1345,21 +1421,172 @@
             outputCopiedPaxIntegerLabel1.BackColor = Color.White;
             outputCopiedPaxIntegerLabel1.Location = new Point(190, 30);
             outputCopiedPaxIntegerLabel1.Name = "outputCopiedPaxIntegerLabel1";
-            outputCopiedPaxIntegerLabel1.Size = new Size(129, 20);
+            outputCopiedPaxIntegerLabel1.Size = new Size(130, 20);
             outputCopiedPaxIntegerLabel1.TabIndex = 6;
             // 
             // exitButton
             // 
             exitButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            exitButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            exitButton.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             exitButton.ForeColor = Color.FromArgb(64, 0, 64);
-            exitButton.Location = new Point(765, 636);
+            exitButton.Location = new Point(885, 636);
             exitButton.Name = "exitButton";
             exitButton.Size = new Size(50, 25);
             exitButton.TabIndex = 10;
             exitButton.Text = "E&xit";
             exitButton.UseVisualStyleBackColor = true;
             exitButton.Click += exitButton_Click;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(eTourTourismAttractionsListBox);
+            panel4.Controls.Add(outputBudgetToFitLabel3);
+            panel4.Controls.Add(sightseeingPictureBox);
+            panel4.Controls.Add(tourismLabel3);
+            panel4.Controls.Add(goButtonWhileLoop3);
+            panel4.Controls.Add(comparePriceAndBudgetMatch3);
+            panel4.Controls.Add(getPriceFromAnnouncedSiteListPriceButton);
+            panel4.Controls.Add(outputifOnlyOneTourOptionListed);
+            panel4.Controls.Add(siteSeeingFaresListBox);
+            panel4.Controls.Add(priceOfSiteseeingLabel);
+            panel4.Controls.Add(numberOfPaxLabel3);
+            panel4.Controls.Add(outputLabelFareOnThisTouristSite);
+            panel4.Controls.Add(outputCopiedPaxIntegerLabel3);
+            panel4.Location = new Point(27, 278);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(910, 111);
+            panel4.TabIndex = 14;
+            // 
+            // eTourTourismAttractionsListBox
+            // 
+            eTourTourismAttractionsListBox.FormattingEnabled = true;
+            eTourTourismAttractionsListBox.ItemHeight = 14;
+            eTourTourismAttractionsListBox.Items.AddRange(new object[] { "eTourTourismAttractions" });
+            eTourTourismAttractionsListBox.Location = new Point(466, 8);
+            eTourTourismAttractionsListBox.Name = "eTourTourismAttractionsListBox";
+            eTourTourismAttractionsListBox.Size = new Size(305, 88);
+            eTourTourismAttractionsListBox.TabIndex = 14;
+            // 
+            // outputBudgetToFitLabel3
+            // 
+            outputBudgetToFitLabel3.BackColor = Color.White;
+            outputBudgetToFitLabel3.Location = new Point(15, 75);
+            outputBudgetToFitLabel3.Name = "outputBudgetToFitLabel3";
+            outputBudgetToFitLabel3.Size = new Size(172, 23);
+            outputBudgetToFitLabel3.TabIndex = 13;
+            // 
+            // sightseeingPictureBox
+            // 
+            sightseeingPictureBox.Image = Properties.Resources._20200103_184446279_iOS;
+            sightseeingPictureBox.Location = new Point(782, 6);
+            sightseeingPictureBox.Name = "sightseeingPictureBox";
+            sightseeingPictureBox.Size = new Size(120, 93);
+            sightseeingPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            sightseeingPictureBox.TabIndex = 10;
+            sightseeingPictureBox.TabStop = false;
+            // 
+            // tourismLabel3
+            // 
+            tourismLabel3.BackColor = Color.White;
+            tourismLabel3.Location = new Point(12, 7);
+            tourismLabel3.Name = "tourismLabel3";
+            tourismLabel3.Size = new Size(175, 23);
+            tourismLabel3.TabIndex = 0;
+            tourismLabel3.Text = "Automated Sightseeing Gate Accesses";
+            tourismLabel3.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // goButtonWhileLoop3
+            // 
+            goButtonWhileLoop3.Location = new Point(10, 29);
+            goButtonWhileLoop3.Name = "goButtonWhileLoop3";
+            goButtonWhileLoop3.Size = new Size(177, 23);
+            goButtonWhileLoop3.TabIndex = 3;
+            goButtonWhileLoop3.Text = "Repeat Price to fit Pax";
+            goButtonWhileLoop3.TextAlign = ContentAlignment.MiddleLeft;
+            goButtonWhileLoop3.UseVisualStyleBackColor = true;
+            goButtonWhileLoop3.Click += goButtonWhileLoop3_Click;
+            // 
+            // comparePriceAndBudgetMatch3
+            // 
+            comparePriceAndBudgetMatch3.Location = new Point(11, 50);
+            comparePriceAndBudgetMatch3.Name = "comparePriceAndBudgetMatch3";
+            comparePriceAndBudgetMatch3.Size = new Size(177, 23);
+            comparePriceAndBudgetMatch3.TabIndex = 4;
+            comparePriceAndBudgetMatch3.Text = "Compare Budget";
+            comparePriceAndBudgetMatch3.TextAlign = ContentAlignment.MiddleLeft;
+            comparePriceAndBudgetMatch3.UseVisualStyleBackColor = true;
+            comparePriceAndBudgetMatch3.Click += comparePriceAndBudgetMatch3_Click;
+            // 
+            // getPriceFromAnnouncedSiteListPriceButton
+            // 
+            getPriceFromAnnouncedSiteListPriceButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            getPriceFromAnnouncedSiteListPriceButton.Location = new Point(187, 76);
+            getPriceFromAnnouncedSiteListPriceButton.Name = "getPriceFromAnnouncedSiteListPriceButton";
+            getPriceFromAnnouncedSiteListPriceButton.Size = new Size(132, 23);
+            getPriceFromAnnouncedSiteListPriceButton.TabIndex = 9;
+            getPriceFromAnnouncedSiteListPriceButton.Text = "Get the Price Rate";
+            getPriceFromAnnouncedSiteListPriceButton.UseVisualStyleBackColor = true;
+            getPriceFromAnnouncedSiteListPriceButton.Click += getPriceFromAnnouncedSiteListPriceButton_Click;
+            // 
+            // outputifOnlyOneTourOptionListed
+            // 
+            outputifOnlyOneTourOptionListed.BackColor = Color.White;
+            outputifOnlyOneTourOptionListed.Location = new Point(190, 7);
+            outputifOnlyOneTourOptionListed.Name = "outputifOnlyOneTourOptionListed";
+            outputifOnlyOneTourOptionListed.Size = new Size(128, 20);
+            outputifOnlyOneTourOptionListed.TabIndex = 1;
+            // 
+            // siteSeeingFaresListBox
+            // 
+            siteSeeingFaresListBox.FormattingEnabled = true;
+            siteSeeingFaresListBox.ItemHeight = 14;
+            siteSeeingFaresListBox.Items.AddRange(new object[] { "eTours Tides Tourism Attraction, Mont Saint, Michel: France: Airport Paris-Charles De Gaulle (CDG)", "eTours Tides Tourism AttractionMont Saint, Michel Bay: Canada: Airport Montreal Mirabel Intl Apt (YMX)", "eTour Onboard Water Sports via Ships Attraction, Seabourn Odyssey: Point of Sail Western Mediterranean Cruise", "eTour Onboard Water Sports via Ships Attraction, Oasis of the Sea: Point of Sail Western Mediterranean Cruise" });
+            siteSeeingFaresListBox.Location = new Point(324, 7);
+            siteSeeingFaresListBox.Name = "siteSeeingFaresListBox";
+            siteSeeingFaresListBox.Size = new Size(136, 88);
+            siteSeeingFaresListBox.TabIndex = 2;
+            // 
+            // priceOfSiteseeingLabel
+            // 
+            priceOfSiteseeingLabel.BackColor = Color.FromArgb(192, 255, 192);
+            priceOfSiteseeingLabel.BorderStyle = BorderStyle.Fixed3D;
+            priceOfSiteseeingLabel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            priceOfSiteseeingLabel.ForeColor = Color.FromArgb(64, 0, 64);
+            priceOfSiteseeingLabel.Location = new Point(263, 54);
+            priceOfSiteseeingLabel.Name = "priceOfSiteseeingLabel";
+            priceOfSiteseeingLabel.Size = new Size(50, 17);
+            priceOfSiteseeingLabel.TabIndex = 7;
+            priceOfSiteseeingLabel.Text = "PRICE";
+            priceOfSiteseeingLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // numberOfPaxLabel3
+            // 
+            numberOfPaxLabel3.BackColor = Color.FromArgb(192, 255, 192);
+            numberOfPaxLabel3.BorderStyle = BorderStyle.Fixed3D;
+            numberOfPaxLabel3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            numberOfPaxLabel3.ForeColor = Color.FromArgb(64, 0, 64);
+            numberOfPaxLabel3.Location = new Point(264, 32);
+            numberOfPaxLabel3.Name = "numberOfPaxLabel3";
+            numberOfPaxLabel3.Size = new Size(50, 17);
+            numberOfPaxLabel3.TabIndex = 5;
+            numberOfPaxLabel3.Text = "PAX";
+            numberOfPaxLabel3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // outputLabelFareOnThisTouristSite
+            // 
+            outputLabelFareOnThisTouristSite.BackColor = Color.White;
+            outputLabelFareOnThisTouristSite.Location = new Point(189, 52);
+            outputLabelFareOnThisTouristSite.Name = "outputLabelFareOnThisTouristSite";
+            outputLabelFareOnThisTouristSite.Size = new Size(130, 20);
+            outputLabelFareOnThisTouristSite.TabIndex = 8;
+            // 
+            // outputCopiedPaxIntegerLabel3
+            // 
+            outputCopiedPaxIntegerLabel3.BackColor = Color.White;
+            outputCopiedPaxIntegerLabel3.Location = new Point(190, 30);
+            outputCopiedPaxIntegerLabel3.Name = "outputCopiedPaxIntegerLabel3";
+            outputCopiedPaxIntegerLabel3.Size = new Size(129, 20);
+            outputCopiedPaxIntegerLabel3.TabIndex = 6;
             // 
             // tabPage2
             // 
@@ -1391,46 +1618,6 @@
             tabPage4.Text = "tabPage4";
             tabPage4.UseVisualStyleBackColor = true;
             // 
-            // passengerFirstName
-            // 
-            passengerFirstName.Location = new Point(220, 53);
-            passengerFirstName.Multiline = true;
-            passengerFirstName.Name = "passengerFirstName";
-            passengerFirstName.Size = new Size(225, 20);
-            passengerFirstName.TabIndex = 37;
-            // 
-            // passengerNameTextBox4
-            // 
-            passengerNameTextBox4.Location = new Point(219, 99);
-            passengerNameTextBox4.Multiline = true;
-            passengerNameTextBox4.Name = "passengerNameTextBox4";
-            passengerNameTextBox4.Size = new Size(225, 20);
-            passengerNameTextBox4.TabIndex = 38;
-            // 
-            // passengerNameTextBox5
-            // 
-            passengerNameTextBox5.Location = new Point(218, 121);
-            passengerNameTextBox5.Multiline = true;
-            passengerNameTextBox5.Name = "passengerNameTextBox5";
-            passengerNameTextBox5.Size = new Size(225, 20);
-            passengerNameTextBox5.TabIndex = 39;
-            // 
-            // passengerNameTextBox6
-            // 
-            passengerNameTextBox6.Location = new Point(219, 145);
-            passengerNameTextBox6.Multiline = true;
-            passengerNameTextBox6.Name = "passengerNameTextBox6";
-            passengerNameTextBox6.Size = new Size(225, 20);
-            passengerNameTextBox6.TabIndex = 41;
-            // 
-            // passengerNameTextBox1
-            // 
-            passengerNameTextBox1.Location = new Point(219, 76);
-            passengerNameTextBox1.Multiline = true;
-            passengerNameTextBox1.Name = "passengerNameTextBox1";
-            passengerNameTextBox1.Size = new Size(225, 20);
-            passengerNameTextBox1.TabIndex = 42;
-            // 
             // oneStopTouristApplication
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1444,24 +1631,29 @@
             combinedBoardingPassAndTicket.ResumeLayout(false);
             automatedTourOperatourFutureGoal.ResumeLayout(false);
             automatedTourOperatourFutureGoal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             outputResetValuesListBox1.ResumeLayout(false);
-            tabPage10.ResumeLayout(false);
-            tabPage11.ResumeLayout(false);
-            tabControl1.ResumeLayout(false);
+            resetPrices.ResumeLayout(false);
+            advantageOfThreePaxFigures.ResumeLayout(false);
+            weeklyPlanner.ResumeLayout(false);
             touristIdentification.ResumeLayout(false);
             touristIdentification.PerformLayout();
+            weeklyPlannerTabPage.ResumeLayout(false);
+            weeklyPlannerTabPage.PerformLayout();
+            accumulatedBalance.ResumeLayout(false);
+            accumulatedBalance.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)restaurantPictureBox).EndInit();
-            panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)sightseeingPictureBox).EndInit();
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)lodgingPictureBox).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)airplanePictureBox).EndInit();
+            panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)sightseeingPictureBox).EndInit();
             ResumeLayout(false);
         }
 
@@ -1507,7 +1699,6 @@
         private Label numberOfPaxLabel3;
         private Label outputLabelFareOnThisTouristSite;
         private Label outputCopiedPaxIntegerLabel3;
-        private ListBox outputBookedSightSeeingGatesLabel;
         private Label outputBudgetToFitLabel;
         private Label outputBudgetToFitLabel3;
         private Label outputBudgetToFitLabel2;
@@ -1520,7 +1711,6 @@
         private Button clearButton3RD;
         private Panel panel5;
         private Label outputBudgetToFitLabel4;
-        private ListBox outputBookedRestaurantSeatsLabel;
         private PictureBox restaurantPictureBox;
         private Label tourismLabel4;
         private Button goButtonWhileLoop4;
@@ -1553,18 +1743,18 @@
         private RadioButton lodgingSelectionColorControl;
         private RadioButton sigthSeeingSelectionColorControl;
         private RadioButton restaurantsSelectionColorControl;
-        private TabControl tabControl1;
+        private TabControl weeklyPlanner;
         private TabPage touristIdentification;
-        private TabPage tabPage5;
-        private TabPage tabPage6;
-        private TabPage tabPage7;
+        private TabPage weeklyPlannerTabPage;
+        private TabPage accumulatedBalance;
+        private TabPage creditPointsToMileage;
         private TabPage tabPage8;
         private TabPage tabPage9;
         private TabControl outputResetValuesListBox1;
-        private TabPage tabPage10;
+        private TabPage resetPrices;
         private Button refreshPriceDataType;
         private ListBox outputResetValuesListBox;
-        private TabPage tabPage11;
+        private TabPage advantageOfThreePaxFigures;
         private ListBox forLoopListBox;
         private Button getPayment;
         private Label tourismLabel10;
@@ -1585,5 +1775,24 @@
         private TextBox passengerNameTextBox6;
         private TextBox passengerNameTextBox5;
         private TextBox passengerNameTextBox4;
+        private ListBox listBoxTasks;
+        private Button addButton;
+        private Button showTasksButton;
+        private TextBox taskTextBox;
+        private ListBox listBoxDays;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private PictureBox pictureBox2;
+        private TextBox textBox2;
+        private Label label6;
+        private TextBox textBox1;
+        private Label label5;
+        private ListBox airlineFaresListBox2;
+        private Button mathTestingButton;
+        private ListBox lodgingFaresListBox;
+        private ListBox eTourTourismAttractionsListBox;
+        private ListBox automatedRestaurnatsBookingListBox;
     }
 }

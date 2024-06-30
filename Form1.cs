@@ -1,5 +1,7 @@
+using System;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.Linq.Expressions;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
@@ -14,12 +16,15 @@ namespace One_Stop_Tourist_identity_Application
         public oneStopTouristApplication()
         {
             InitializeComponent();
+
         }
+
+
         // The Sum method accepts three decimal arguments
         // and returns the sum of the arguments.
-        private decimal Sum(decimal num1, decimal num2, decimal num3)
+        private decimal Sum(decimal num1, decimal num2, decimal num3, decimal num4)
         {
-            return num1 + num2 + num3;
+            return num1 + num2 + num3 + num4;
         }
 
         private decimal Multiplication(decimal num1, int num2)
@@ -38,96 +43,112 @@ namespace One_Stop_Tourist_identity_Application
 
         private void getPriceFromAnnouncedListPriceButton_Click(object sender, EventArgs e)
         {
-            // To hold the name of an airlines and its fare temporary
-            string airlineFares;
+            try
 
-            if (airLineFaresListBox.SelectedIndex != -1)
             {
-                // Get the selected airline item's fare.
-                airlineFares = airLineFaresListBox.SelectedItem.ToString();
+                // To hold the name of an airlines and its fare temporary
+                string airlineFares;
 
-                // Determine the ailineFare
-                switch (airlineFares)
+                //check selected airlineFares in listbox
+                if (airLineFaresListBox.SelectedIndex != -1)
                 {
-                    case "Air (2I)":
-                        outputLabelFareOnThisFlight.Text = "14000";
-                        break;
-                    case "40-Mile Air (Q5)":
-                        outputLabelFareOnThisFlight.Text = "1000";
-                        break;
-                    case "Air Co (AQ)":
-                        outputLabelFareOnThisFlight.Text = "750";
-                        break;
-                    case "Advanced Air (AN)":
-                        outputLabelFareOnThisFlight.Text = "1000";
-                        break;
-                    case "Aegean Airlines (A3)":
-                        outputLabelFareOnThisFlight.Text = "600";
-                        break;
-                    case "Aer Lingus (EI)":
-                        outputLabelFareOnThisFlight.Text = "900";
-                        break;
-                    default:
-                        MessageBox.Show("Airline must be either in listing or pricing process");
-                        break;
+                    // Get the selected airline item's fare.
+                    airlineFares = airLineFaresListBox.SelectedItem.ToString();
+
+                    // Determine the ailineFare
+                    switch (airlineFares)
+                    {
+                        case "Air (2I)":
+                            outputLabelFareOnThisFlight.Text = "14000";
+                            break;
+                        case "40-Mile Air (Q5)":
+                            outputLabelFareOnThisFlight.Text = "1000";
+                            break;
+                        case "Air Co (AQ)":
+                            outputLabelFareOnThisFlight.Text = "750";
+                            break;
+                        case "Advanced Air (AN)":
+                            outputLabelFareOnThisFlight.Text = "1000";
+                            break;
+                        case "Aegean Airlines (A3)":
+                            outputLabelFareOnThisFlight.Text = "600";
+                            break;
+                        case "Aer Lingus (EI)":
+                            outputLabelFareOnThisFlight.Text = "900";
+                            break;
+                        default:
+                            MessageBox.Show("Airline must be either in listing or pricing process");
+                            break;
+                    }
 
                 }
 
+                else
+                {
+                    // Show error message when no item is selected
+                    MessageBox.Show("Select an Airline and Airline Fare.");
+                }
             }
-            else
-            {
-                // Show error message when no item is selected
-                MessageBox.Show("Select an Airline and Airline Fare.");
 
+            catch
+            {
+                MessageBox.Show("There is an exception to  handle");
             }
         }
 
 
         private void getPriceFromAnnouncedListPrice_Click(object sender, EventArgs e)
         {
-
-
-            // To hold the name of a lodging and its fare
-            string lodgingFares;
-
-            if (roomsFaresListBox.SelectedIndex != -1)
+            try
             {
-                // Get the selected item.
-                lodgingFares = roomsFaresListBox.SelectedItem.ToString();
+                // To hold the name of a lodging and its fare
+                string lodgingFares;
 
-
-                // Determine the lodgingFare
-                switch (lodgingFares)
+                if (roomsFaresListBox.SelectedIndex != -1)
                 {
-                    case "Ritz - Carlton Hotel":
-                        outputLabelFareOnThisRoom.Text = "3000";
-                        break;
-                    case "Aman Resorts":
-                        outputLabelFareOnThisRoom.Text = "400";
-                        break;
-                    case "Marriott International":
-                        outputLabelFareOnThisRoom.Text = "4000";
-                        break;
-                    case "Hilton":
-                        outputLabelFareOnThisRoom.Text = "800";
-                        break;
-                    case "Hyatt Hotel":
-                        outputLabelFareOnThisRoom.Text = "1200";
-                        break;
-                    case "Wyndham Lodging":
-                        outputLabelFareOnThisRoom.Text = "400";
-                        break;
-                    default:
-                        MessageBox.Show("Hotel or Lodging place must be either in listing or pricing process");
-                        break;
-                }
+                        // Get the selected item.
+                        lodgingFares = roomsFaresListBox.SelectedItem.ToString();
+
+                        // Determine the lodgingFare
+                        switch (lodgingFares)
+                        {
+                            case "Ritz - Carlton Hotel":
+                                outputLabelFareOnThisRoom.Text = "3000";
+                                break;
+                            case "Aman Resorts":
+                                outputLabelFareOnThisRoom.Text = "400";
+                                break;
+                            case "Marriott International":
+                                outputLabelFareOnThisRoom.Text = "4000";
+                                break;
+                            case "Hilton":
+                                outputLabelFareOnThisRoom.Text = "800";
+                                break;
+                            case "Hyatt Hotel":
+                                outputLabelFareOnThisRoom.Text = "1200";
+                                break;
+                            case "Wyndham Lodging":
+                                outputLabelFareOnThisRoom.Text = "400";
+                                break;
+                            default:
+                                MessageBox.Show("Hotel or Lodging place must be either in listing or pricing process");
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        // Show error message when no item is selected
+                        MessageBox.Show("Select a Room or a Room Fare.");
+                    }
+                
             }
-            else
+            catch
             {
-                // Show error message when no item is selected
-                MessageBox.Show("Select a Room or a Room Fare.");
+                MessageBox.Show("There is an exception to handle caused by the Parse");
             }
+
         }
+
 
         private void exitButton_Click(object sender, EventArgs e)
         {
@@ -136,69 +157,75 @@ namespace One_Stop_Tourist_identity_Application
 
         private void getPriceFromAnnouncedSiteListPriceButton_Click(object sender, EventArgs e)
         {
-            if (decimal.TryParse(outputLabelFareOnThisRoom.Text, out decimal lodgingFares))
+            try
             {
-                if (decimal.TryParse(budgetValueTextBox.Text, out decimal budgetValue))
-                {
-                    if (lodgingFares >= 0 && lodgingFares <= budgetValue)
-                    {
-                        // Continue to process the input.
-                        // To hold the name of an eTour fit to Tourism Category, country and fare fit to budget
-                        string eTourTidesSeeing;
 
-                        if (siteSeeingFaresListBox.SelectedIndex != -1)
+                if (decimal.TryParse(outputLabelFareOnThisRoom.Text, out decimal lodgingFares))
+                {
+                    if (decimal.TryParse(budgetValueTextBox.Text, out decimal budgetValue))
+                    {
+                        if (lodgingFares >= 0 && lodgingFares <= budgetValue)
                         {
-                            if (siteSeeingFaresListBox.SelectedIndex == 1)
+                            // Continue to process the input.
+                            // To hold the name of an eTour fit to Tourism Category, country and fare fit to budget
+                            string combinedSiteSeeingFares;
+
+
+                            if (siteSeeingFaresListBox.SelectedIndex != -1)
                             {
+                                // if (siteSeeingFaresListBox.SelectedIndex == 1)
                                 // Get the selected item.
-                                eTourTidesSeeing = siteSeeingFaresListBox.SelectedItem.ToString();
+                                combinedSiteSeeingFares = siteSeeingFaresListBox.SelectedItem.ToString();
+                                ///outputBookedSightSeeingGatesLabel.Text = eTourTourismAttractions;
+
+                                // Determine the sightseeing fare
+                                switch (combinedSiteSeeingFares)
+                                {
+                                    case "eTours Tides Tourism Attraction, Mont Saint, Michel: France: Airport Paris-Charles De Gaulle(CDG)":
+                                        outputLabelFareOnThisTouristSite.Text = "400";
+                                        break;
+                                    case "eTours Tides Tourism Attraction, Mont Saint, Michel Bay: Canada: Airport Montreal Mirabel Intl Apt(YMX)":
+                                        outputLabelFareOnThisTouristSite.Text = "200";
+                                        break;
+                                    case "eTour Onboard Water Sports via Ships Attraction, Seabourn Odyssey: Point of Sail Western Mediterranean Cruise":
+                                        outputLabelFareOnThisTouristSite.Text = "300";
+                                        break;
+                                    case "eTour Onboard Water Sports via Ships Attraction, Oasis of the Sea: Point of Sail Western Mediterranean Cruise":
+                                        outputLabelFareOnThisTouristSite.Text = "400";
+                                        break;
+                                    default:
+                                        MessageBox.Show("SightSeeing Location must be either in listing or pricing process");
+                                        break;
+                                }
+
                             }
                             else
                             {
-                                eTourTidesSeeing = siteSeeingFaresListBox.SelectedItem.ToString();
-                                outputBookedSightSeeingGatesLabel.Text = eTourTidesSeeing;
-                            }
-
-                            // Determine the sightseeing fare
-                            switch (eTourTidesSeeing)
-                            {
-                                case "eTours Tides Tourism Attraction, Mont Saint, Michel: France: Airport Paris-Charles De Gaulle(CDG)":
-                                    outputLabelFareOnThisTouristSite.Text = "3000";
-                                    break;
-                                case "eTours Tides Tourism AttractionMont Saint, Michel Bay: Canada: Airport Montreal Mirabel Intl Apt(YMX)":
-                                    outputLabelFareOnThisTouristSite.Text = "400";
-                                    break;
-                                case "eTour Onboard Water Sports via Ships Attraction, Seabourn Odyssey: Point of Sail Western Mediterranean Cruise":
-                                    outputLabelFareOnThisTouristSite.Text = "3000";
-                                    break;
-                                case "eTour Onboard Water Sports via Ships Attraction, Oasis of the Sea: Point of Sail Western Mediterranean Cruise":
-                                    outputLabelFareOnThisTouristSite.Text = "400";
-                                    break;
-                                default:
-                                    MessageBox.Show("SightSeeing Location must be either in listing or pricing process");
-                                    break;
+                                MessageBox.Show(" Please select a restaurant fare.");
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Insufficient fit to budget tour.");
+                            MessageBox.Show("The budget selection must either increase or select other items on the previous tourism sector. Insufficient fit to budget tour");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("The budget selection must either increase or select other items on the previous tourism sector.");
+                        MessageBox.Show("Invalid budget value. Please ensure the budget is a valid number.");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Invalid budget value. Please ensure the budget is a valid number.");
+                    MessageBox.Show("Invalid lodging fare. Please ensure the fare is a valid number.");
                 }
             }
-            else
+
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid lodging fare. Please ensure the fare is a valid number.");
+                MessageBox.Show(ex.Message);
             }
         }
+        
 
         private void checkButton_Click(object sender, EventArgs e)
         {
@@ -211,7 +238,7 @@ namespace One_Stop_Tourist_identity_Application
                 if (int.TryParse(airplaneFlightPassengerSeatCountTextBox.Text, out int combinedPax))
                 {
                     // Check the combinedPax's range.
-                    if (combinedPax >= 1 && combinedPax <= 50)
+                    if (combinedPax >= 1 && combinedPax <= 2)
                     {
                         MessageBox.Show("The combined number of Pax are acceptable.");
                         outputCopiedPaxIntegerLabel1.Text = combinedPax.ToString();
@@ -221,7 +248,7 @@ namespace One_Stop_Tourist_identity_Application
                     }
                     else
                     {
-                        MessageBox.Show("The combined number of Pax are unacceptable and you need to contact our tourism information center if the booking requires a full airplane.");
+                        MessageBox.Show("The combined number of Pax are unacceptable and you need to contact our tourism information center if the booking requires a group or a full airplane.");
                     }
                 }
             }
@@ -252,8 +279,12 @@ namespace One_Stop_Tourist_identity_Application
 
             try
             {
-                // Declare variables to hold number of pax and their sum.
-                decimal airlineFares, lodgingFares, combinedSiteSeeingFares, combinedPrice;
+                // Declare variables to hold price fares of tourism components and their sum.
+                decimal airlineFares;
+                decimal lodgingFares;
+                decimal combinedSiteSeeingFares;
+                decimal combinedRestaurantFares;
+                decimal combinedPrice;
 
                 // Get the total number of PAX on board.
                 if (decimal.TryParse(outputLabelFareOnThisFlight.Text, out airlineFares))
@@ -264,39 +295,44 @@ namespace One_Stop_Tourist_identity_Application
                         //Get the total number of visitors in pax
                         if (decimal.TryParse(outputLabelFareOnThisTouristSite.Text, out combinedSiteSeeingFares))
                         {
-                            // Get the sum of the .
-                            combinedPrice = Sum(airlineFares, lodgingFares, combinedSiteSeeingFares);
 
-                            // Display the combined Pax.
-                            combinedPricingLabel2.Text = combinedPrice.ToString();
+                            //Get the total number of visitors in pax
+                            if (decimal.TryParse(outputLabelPriceForThisRestaurants.Text, out combinedRestaurantFares))
+                            {
+                                // Get the sum of the .
+                                combinedPrice = Sum(airlineFares, lodgingFares, combinedSiteSeeingFares, combinedRestaurantFares);
+
+                                // Display the combined Pax.
+                                combinedPricingLabel2.Text = combinedPrice.ToString();
+                            }
+                            else
+                            {
+                                // Display an error message.
+                                MessageBox.Show("Select an airline, room, automated Gateway tours Sightseeing Attractions and restaurants fares for your combined boarding pass and ticket fare");
+                            }
                         }
                         else
                         {
                             // Display an error message.
-                            MessageBox.Show("Select a an airline, room and sightseeing fares for your combined boarding pass and ticket fare");
+                            MessageBox.Show("Enter an integer for your number of Pax.");
                         }
                     }
-                    else
-                    {
-                        // Display an error message.
-                        MessageBox.Show("Enter an integer for your number of Pax.");
-                    }
-                }
 
-                int passengerPax;
-                int guestPax;
-                int visitorPax;
-                int combinedPax;
-                passengerPax = int.Parse(numberOfPaxLabel.Text);
-                guestPax = int.Parse(numberOfPaxLabel2.Text);
-                visitorPax = int.Parse(numberOfPaxLabel3.Text);
-                if (passengerPax >= 1)
-                {
-                    combinedPax = passengerPax;
-                    passengerPax = guestPax;
-                    guestPax = visitorPax;
+                    int passengerPax;
+                    int guestPax;
+                    int visitorPax;
+                    int combinedPax;
+                    passengerPax = int.Parse(numberOfPaxLabel.Text);
+                    guestPax = int.Parse(numberOfPaxLabel2.Text);
+                    visitorPax = int.Parse(numberOfPaxLabel3.Text);
+                    if (passengerPax >= 1)
+                    {
+                        combinedPax = passengerPax;
+                        passengerPax = guestPax;
+                        guestPax = visitorPax;
+                    }
+                    //outputCombinedPaxLabel2.Text = combinedPax.ToString();
                 }
-                //outputCombinedPaxLabel2.Text = combinedPax.ToString();
             }
             catch (Exception ex)
             {
@@ -490,12 +526,10 @@ namespace One_Stop_Tourist_identity_Application
             outputLabelFareOnThisRoom.Text = "";
             outputBudgetToFitLabel2.Text = "";
             outputifOnlyOneTourOptionListed.Text = "";
-            outputBookedSightSeeingGatesLabel.Text = "";
             outputCopiedPaxIntegerLabel3.Text = "";
             outputLabelFareOnThisTouristSite.Text = "";
             outputBudgetToFitLabel3.Text = "";
             outputBookedRestaurantsSeatsLabel.Text = "";
-            outputBookedRestaurantSeatsLabel.Text = "";
             outputCopiedPaxIntegerLabel5.Text = "";
             outputLabelPriceForThisRestaurants.Text = "";
             outputBudgetToFitLabel4.Text = "";
@@ -549,12 +583,13 @@ namespace One_Stop_Tourist_identity_Application
 
         private void displayAirlineFaresRepeatedly_Click(object sender, EventArgs e)
         {
+      
             if (airLineFaresListBox.SelectedIndex != -1)
             {
-                const decimal SELECTED_PRICE = 1m;
+                const decimal SELECTED_PRICEPERPOINT = 1m;
                 string airlineFare = airLineFaresListBox.SelectedItem.ToString();
 
-                for (decimal fare = 0; fare < SELECTED_PRICE; fare++)
+                for (decimal fare = 0; fare < SELECTED_PRICEPERPOINT; fare++)
                 {
                     forLoopListBox.Items.Add("The airline fare on this plane is " + fare + " and " + " the weather is good");
                 }
@@ -589,28 +624,29 @@ namespace One_Stop_Tourist_identity_Application
         {
             {
                 try
+
                 {
                     // Declare a string variable and initialize it with
                     // the tourist's input.
                     // Did the tourist enter the correct budgetWord?
-                    if (decimal.TryParse(outputLabelFareOnThisFlight.Text, out decimal airlineFares))
+                    if (int.TryParse(outputLabelFareOnThisFlight.Text, out int airlineFares))
                     {
-                        if (decimal.TryParse(budgetValueTextBox.Text, out decimal budgetWord))
+                        if (int.TryParse(budgetValueTextBox.Text, out int budgetValue))
                         {
-                            if (airlineFares > budgetWord)
+                            if (airlineFares == budgetValue || airlineFares > budgetValue)
                             {
-                                MessageBox.Show("That is incorrect secret budget word.");
+                                MessageBox.Show("Budget value does not fit.");
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Okay, that still fit with your calculated secret budget word.");
+                            MessageBox.Show("Okay, that does not fit with your calculated Budget value.");
 
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Okay");
+                        MessageBox.Show("Now, Okay!");
                     }
                 }
 
@@ -791,27 +827,377 @@ namespace One_Stop_Tourist_identity_Application
         {
 
         }
+
+        private void goButtonWhileLoop_Click(object sender, EventArgs e, object totalAirlinrFare)
+        {
+
+        }
+
+        private void goButtonWhileLoop2_Click(object sender, EventArgs e)
+        {
+            {
+                // Constant for the monthly sales tax rate
+                // const decimal NATIONAL_IDENTITYTHEFT = 0.001m;
+                //const decimal WASTE_MANAGEMENT = 0.001m;
+                //const decimal SUSTAINABILITY_ENVIRONEMENT = 0.001m;
+                const int MAX_VALUE = 2;
+                const int START_PAX = 1;
+                const int INTERVALS = 1;
+
+
+                // Local variables
+                int lodgingFares;              // The price from the price list
+                int pax;                          // The number of pax
+                int count = 1;                // Loop counter, initialized with 1
+
+
+                // Get the fit price to the budget.
+                if (int.TryParse(outputLabelFareOnThisRoom.Text, out lodgingFares))
+                {
+                    // Get the number of pax.
+                    if (int.TryParse(outputCopiedPaxIntegerLabel2.Text, out pax))
+                    {
+                        // The following loop calculates the price of this portion of the mandatory   combined boarding pass and ticket
+                        for (pax = START_PAX; pax <= MAX_VALUE; pax += 1)
+                        {
+                            // calculate the flight price to compare with the budget down
+                            //portion of the combined fare ticket
+                            lodgingFares = lodgingFares * pax;
+                            // Add one to the loop counter.
+                            count = count + 1;
+
+
+                            // Display the new flightPrice.
+                            // outputLabelFareOnThisRoom.Text = lodgingFares.ToString("n");
+                            lodgingFaresListBox.Items.Add(pax.ToString("n") + " pax has the rate like that " + lodgingFares.ToString("n1"));
+                        }
+                    }
+                    else
+                    {
+                        // Invalid number of pax was entered.
+                        MessageBox.Show("Invalid value for pax.");
+                    }
+                    }
+                    else
+                    {
+                        // Invalid flightPrice was entered.
+                        MessageBox.Show("Invalid value for lodgingFares.");
+                    }
+                }
+            }
+        
+        private void goButtonWhileLoop3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Constant for the monthly sales tax rate
+                const int MAX_VALUE = 2;
+                const int START_PASSENGERNUMBER = 1;
+                const int INTERVALS = 1;
+
+                // Local variables
+                int combinedSiteSeeingFares;
+                int pax;
+                // int combinedSiteSeeingFares;              // The price from the price list
+                //int pax;                          // The number of pax
+                int count = 1;                // Loop counter, initialized with 1
+
+                // Get the fit price to the budget.
+                if (int.TryParse(outputLabelFareOnThisTouristSite.Text, out combinedSiteSeeingFares))
+                {
+                    // Get the number of pax.
+                    if (int.TryParse(outputCopiedPaxIntegerLabel3.Text, out pax))
+                    {
+                        // The following loop calculates the price of this portion of the mandatory   combined boarding pass and ticket
+                        for (pax = START_PASSENGERNUMBER; pax <= MAX_VALUE; pax += 1)
+                        {
+                            // calculate the flight price to compare with the budget down
+                            //portion of the combined fare ticket
+                            combinedSiteSeeingFares = combinedSiteSeeingFares * pax;
+                            // Add one to the loop counter.
+                            count = count + 1;
+                            // Display the new flightPrice.
+                            //outputLabelFareOnThisTouristSite.Text = combinedSiteSeeingFares.ToString("n");
+                            eTourTourismAttractionsListBox.Items.Add(pax.ToString() + " pax has the rate like that " + combinedSiteSeeingFares.ToString("n1"));
+                        }
+                    }
+                    else
+                    {
+                        // Invalid number of pax was entered.
+                        MessageBox.Show("Invalid value for pax.");
+                    }
+                }
+                else
+                {
+                    // Invalid flightPrice was entered.
+                    MessageBox.Show("Invalid value for combinedSiteSeeingFares.");
+                }
+            }
+            catch (Exception ex)
+            { 
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void goButtonWhileLoop4_Click(object sender, EventArgs e)
+        {
+            {
+                // Constant for the monthly sales tax rate
+                const int MAX_VALUE = 2;
+                const int START_PAX = 1;
+                const int INTERVALS = 1;
+
+                // Local variables
+                int combinedRestaurants;              // The price from the price list
+                int pax;                          // The number of pax
+                int count = 1;                // Loop counter, initialized with 1
+
+
+                // Get the fit price to the budget.
+                if (int.TryParse(outputLabelPriceForThisRestaurants.Text, out combinedRestaurants))
+                {
+                    // Get the number of pax.
+                    if (int.TryParse(outputCopiedPaxIntegerLabel5.Text, out pax))
+                    {
+                        // The following loop calculates the price of this portion of the mandatory   combined boarding pass and ticket
+                        for (pax = START_PAX; pax <= MAX_VALUE; pax += 1)
+                        {
+                            // calculate the flight price to compare with the budget down
+                            //portion of the combined fare ticket
+                            combinedRestaurants = combinedRestaurants * pax;
+
+                            // Add one to the loop counter.
+                            count = count + 1;
+
+
+                            // Display the new flightPrice.
+                            //outputLabelPriceForThisRestaurants.Text = combinedRestaurants.ToString("n");
+                            automatedRestaurnatsBookingListBox.Items.Add(pax.ToString("n") + " pax has the rate like that " + combinedRestaurants.ToString("n1"));
+                        }
+                    }
+                    else
+                    {
+                        // Invalid number of pax was entered.
+                        MessageBox.Show("Invalid value for pax.");
+                    }
+                }
+                else
+                {
+                    // Invalid flightPrice was entered.
+                    MessageBox.Show("Invalid value for combinedRestaurants.");
+                }
+            }
+        }
+
+        private void comparePriceAndBudgetMatch2_Click(object sender, EventArgs e)
+        {
+            {
+                try
+                {
+                    int airlineFares;
+                    // Declare a string variable and initialize it with
+                    // the tourist's input.
+                    // Did the tourist enter the correct budgetValue?
+                    if (decimal.TryParse(outputLabelFareOnThisRoom.Text, out decimal lodgingFares))
+                    { 
+                        if (int.TryParse(outputLabelFareOnThisFlight.Text, out airlineFares))
+                        { 
+                            //{
+                              //  if (decimal.TryParse(budgetValueTextBox.Text, out decimal budgetValue))
+                       // {
+                            if (lodgingFares > airlineFares)
+                            {
+                                MessageBox.Show("That room fare is not a budget fit value.");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Okay, that still fit with your calculated secret budget value.");
+
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Okay");
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+        }
+
+        private void goButtonWhileLoop_Click(object sender, EventArgs e)
+        {
+
+            // Constant for the monthly sales tax rate
+            // const int PERCENTAGE_NATIONALIDENTITYTHEFT = 10;
+            // const int PERCENTAGE_WASTEMANAGEMENT = 10;
+            //  const int PERCENTAGE_SUSTAINABILITYENVIRONEMENT = 10;
+            const int MAX_VALUE = 2;
+            const int START_PAX = 1;
+            const int INTERVALS = 1;
+
+            // Local variables
+            int pax;                        // The number of pax
+            int airlineFares;              // The price from the price list
+            int count = 1;                // Loop counter, initialized with 1
+
+
+            // Get the fit price to the budget.
+            if (int.TryParse(outputLabelFareOnThisFlight.Text, out airlineFares))
+            {
+                // Get the number of pax.
+                if (int.TryParse(outputCopiedPaxIntegerLabel1.Text, out pax))
+
+                {
+                    // airlineFares = (airlineFares * PERCENTAGE_NATIONALIDENTITYTHEFT) + (airlineFares * PERCENTAGE_WASTEMANAGEMENT) * (airlineFares * PERCENTAGE_SUSTAINABILITYENVIRONEMENT);
+                    // outputLabelFareOnThisFlight.Text = airlineFares.ToString("n");
+                }
+                {
+                    // The following loop calculates the price of this portion of the mandatory combined boarding pass and ticket
+                    for (pax = START_PAX; pax <= MAX_VALUE; pax += 1)
+                    {
+                        // calculate the flight price to compare with the budget down
+                        //portion of the combined fare ticket
+                        // Calculate the total flight price including additional charges
+                        // We are using a loop to accumulate the fares
+                        airlineFares = airlineFares * pax;
+                        airlineFaresListBox2.Items.Add(pax.ToString("n") + " pax has the rate like that " + airlineFares.ToString("n1"));
+                        // Add one to the loop counter.
+                        count = count + 1;
+                    }
+
+                    // Display the new flightPrice.
+                    // outputLabelFareOnThisFlight.Text = airLineFares.ToString("n");
+                }
+            }
+            else
+            {
+                // Invalid number of pax was entered.
+                MessageBox.Show("Invalid value for pax and airlineFares.");
+            }
+        }
+
+        private void mathTestingButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Initialize the airlineFares variable
+                int airlineFares = 0;
+                int logAirlineFare = 0;
+
+                // Check if an item is selected in the list box
+                if (airLineFaresListBox.SelectedIndex != -1)
+                {
+                    // Parse the selected item as an integer
+                    airlineFares = int.Parse(airLineFaresListBox.SelectedItem.ToString());
+
+                    // Calculate the natural logarithm of the airline fare
+                    logAirlineFare = (int)Math.Log(airlineFares);
+
+                    // Add the fare to the second list box
+                    airlineFaresListBox2.Items.Add(logAirlineFare.ToString("n"));
+
+                    // Display the result or use it as needed
+                    MessageBox.Show($"The natural logarithm of the selected airline fare is {logAirlineFare}");
+                }
+                else
+                {
+                    // Handle the case where no item is selected
+                    MessageBox.Show("No value selected. Please select a valid airline fare.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Display any exception messages
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void comparePriceAndBudgetMatch4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comparePriceAndBudgetMatch3_Click(object sender, EventArgs e)
+        {
+            {
+                try
+                {
+                    int combinedSiteSeeingFares;
+                    int lodgingFares;
+                    int budgetValue;
+                    // Declare a string variable and initialize it with
+                    // the tourist's input.
+                    // Did the tourist enter the correct budgetValue?
+                    if (int.TryParse(outputLabelFareOnThisTouristSite.Text, out combinedSiteSeeingFares))
+                    {
+                        if (int.TryParse(outputLabelFareOnThisRoom.Text, out lodgingFares))
+                        {
+
+                            if (int.TryParse(budgetValueTextBox.Text, out budgetValue))
+                            {
+                                if (combinedSiteSeeingFares == budgetValue || combinedSiteSeeingFares > lodgingFares)
+                                {
+                                    MessageBox.Show("That combined siteseeing or tour operator fare is not a budget fit value.");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Okay, that still fit with your calculated secret budget value.");
+
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Okay");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
     }
 }
-
-
-
-
-         
-    
-            
     
 
 
 
 
-        
-    
 
 
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

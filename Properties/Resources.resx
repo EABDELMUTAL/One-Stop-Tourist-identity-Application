@@ -118,17 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="room picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\room picture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Budget image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Budget image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tourists1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tourists1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cherry_woods_master_plan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cherry_woods_master_plan.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="OIP2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OIP2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="room picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\room picture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tourists" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tourists.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20200111_041409492_iOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20200111_041409492_iOS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="OIP1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OIP1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,16 +154,13 @@
   <data name="patent picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\patent picture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="20200111_041409492_iOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\20200111_041409492_iOS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="20200104_175351381_iOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\20200104_175351381_iOS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tourists" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tourists.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cherry_woods_master_plan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cherry_woods_master_plan.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="OIP2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OIP2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="airbus-a320" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\airbus-a320.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
