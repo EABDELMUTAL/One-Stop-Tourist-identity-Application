@@ -438,6 +438,7 @@
             passengerNameTextBox1.Name = "passengerNameTextBox1";
             passengerNameTextBox1.Size = new Size(172, 20);
             passengerNameTextBox1.TabIndex = 42;
+            passengerNameTextBox1.TextChanged += passengerNameTextBox1_TextChanged;
             // 
             // passengerNameTextBox6
             // 

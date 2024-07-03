@@ -106,41 +106,41 @@ namespace One_Stop_Tourist_identity_Application
 
                 if (roomsFaresListBox.SelectedIndex != -1)
                 {
-                        // Get the selected item.
-                        lodgingFares = roomsFaresListBox.SelectedItem.ToString();
+                    // Get the selected item.
+                    lodgingFares = roomsFaresListBox.SelectedItem.ToString();
 
-                        // Determine the lodgingFare
-                        switch (lodgingFares)
-                        {
-                            case "Ritz - Carlton Hotel":
-                                outputLabelFareOnThisRoom.Text = "3000";
-                                break;
-                            case "Aman Resorts":
-                                outputLabelFareOnThisRoom.Text = "400";
-                                break;
-                            case "Marriott International":
-                                outputLabelFareOnThisRoom.Text = "4000";
-                                break;
-                            case "Hilton":
-                                outputLabelFareOnThisRoom.Text = "800";
-                                break;
-                            case "Hyatt Hotel":
-                                outputLabelFareOnThisRoom.Text = "1200";
-                                break;
-                            case "Wyndham Lodging":
-                                outputLabelFareOnThisRoom.Text = "400";
-                                break;
-                            default:
-                                MessageBox.Show("Hotel or Lodging place must be either in listing or pricing process");
-                                break;
-                        }
-                    }
-                    else
+                    // Determine the lodgingFare
+                    switch (lodgingFares)
                     {
-                        // Show error message when no item is selected
-                        MessageBox.Show("Select a Room or a Room Fare.");
+                        case "Ritz - Carlton Hotel":
+                            outputLabelFareOnThisRoom.Text = "3000";
+                            break;
+                        case "Aman Resorts":
+                            outputLabelFareOnThisRoom.Text = "400";
+                            break;
+                        case "Marriott International":
+                            outputLabelFareOnThisRoom.Text = "4000";
+                            break;
+                        case "Hilton":
+                            outputLabelFareOnThisRoom.Text = "800";
+                            break;
+                        case "Hyatt Hotel":
+                            outputLabelFareOnThisRoom.Text = "1200";
+                            break;
+                        case "Wyndham Lodging":
+                            outputLabelFareOnThisRoom.Text = "400";
+                            break;
+                        default:
+                            MessageBox.Show("Hotel or Lodging place must be either in listing or pricing process");
+                            break;
                     }
-                
+                }
+                else
+                {
+                    // Show error message when no item is selected
+                    MessageBox.Show("Select a Room or a Room Fare.");
+                }
+
             }
             catch
             {
@@ -176,6 +176,8 @@ namespace One_Stop_Tourist_identity_Application
                                 // if (siteSeeingFaresListBox.SelectedIndex == 1)
                                 // Get the selected item.
                                 combinedSiteSeeingFares = siteSeeingFaresListBox.SelectedItem.ToString();
+
+
                                 ///outputBookedSightSeeingGatesLabel.Text = eTourTourismAttractions;
 
                                 // Determine the sightseeing fare
@@ -225,7 +227,7 @@ namespace One_Stop_Tourist_identity_Application
                 MessageBox.Show(ex.Message);
             }
         }
-        
+
 
         private void checkButton_Click(object sender, EventArgs e)
         {
@@ -314,7 +316,7 @@ namespace One_Stop_Tourist_identity_Application
                         else
                         {
                             // Display an error message.
-                            MessageBox.Show("Enter an integer for your number of Pax.");
+                            MessageBox.Show("Enter an integer for your number of fares.");
                         }
                     }
 
@@ -502,18 +504,18 @@ namespace One_Stop_Tourist_identity_Application
 
         private void insertBudget_Click(object sender, EventArgs e)
         {
-            { 
-            
-           try
+            {
+
+                try
                 {
                     decimal budgetValue;
                     budgetValue = decimal.Parse(budgetValueTextBox.Text);
-                    if (budgetValue != 300 && budgetValue < 300)
+                    if (budgetValue != 500 && budgetValue < 500)
                         MessageBox.Show("Increase Budget and compare it with every section of the ticket before you pack and travel");
-                    outputBudgetToFitLabel.Text = budgetValue.ToString();
-                    outputBudgetToFitLabel2.Text = budgetValue.ToString();
-                    outputBudgetToFitLabel3.Text = budgetValue.ToString();
-                    outputBudgetToFitLabel4.Text = budgetValue.ToString();
+                    outputBudgetToFitLabel.Text = budgetValue.ToString("c");
+                    outputBudgetToFitLabel2.Text = budgetValue.ToString("c");
+                    outputBudgetToFitLabel3.Text = budgetValue.ToString("c");
+                    outputBudgetToFitLabel4.Text = budgetValue.ToString("c");
 
                 }
 
@@ -599,7 +601,7 @@ namespace One_Stop_Tourist_identity_Application
 
         private void displayAirlineFaresRepeatedly_Click(object sender, EventArgs e)
         {
-      
+
             if (airLineFaresListBox.SelectedIndex != -1)
             {
                 const decimal SELECTED_PRICEPERPOINT = 1m;
@@ -767,7 +769,7 @@ namespace One_Stop_Tourist_identity_Application
             // Array to hold numbers with letters/words 
             //Create a Random object. 
             var rand = new Random();
-            // Fill the array with random numbers, in the range // of 0 through 99.   (add back if you want 
+            // Fill the array with random numbers, in the range // of 0 through 99 and 299.   (add back if you want 
             for (int index = 0; index < touristIdentityNumbers.Length; index++)
             {
                 touristIdentityNumbers[index] = rand.Next(100, 300);
@@ -792,7 +794,7 @@ namespace One_Stop_Tourist_identity_Application
             {
 
                 // Create an array to hold three strings.
-                const int SIZE = 10;
+                const int SIZE = 5;
                 string[] names = new string[SIZE];
 
                 // Get the names.
@@ -838,7 +840,7 @@ namespace One_Stop_Tourist_identity_Application
             }
 
         }
-        
+
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
@@ -894,19 +896,19 @@ namespace One_Stop_Tourist_identity_Application
                         // Invalid number of pax was entered.
                         MessageBox.Show("Invalid value for pax.");
                     }
-                    }
-                    else
-                    {
-                        // Invalid flightPrice was entered.
-                        MessageBox.Show("Invalid value for lodgingFares.");
-                    }
                 }
+                else
+                {
+                    // Invalid flightPrice was entered.
+                    MessageBox.Show("Invalid value for lodgingFares.");
+                }
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-          }
-        
+        }
+
         private void goButtonWhileLoop3_Click(object sender, EventArgs e)
         {
             try
@@ -955,7 +957,7 @@ namespace One_Stop_Tourist_identity_Application
                 }
             }
             catch (Exception ex)
-            { 
+            {
                 MessageBox.Show(ex.Message);
             }
         }
@@ -1025,12 +1027,12 @@ namespace One_Stop_Tourist_identity_Application
                     // the tourist's input.
                     // Did the tourist enter the correct budgetValue?
                     if (decimal.TryParse(outputLabelFareOnThisRoom.Text, out decimal lodgingFares))
-                    { 
+                    {
                         if (int.TryParse(outputLabelFareOnThisFlight.Text, out airlineFares))
-                        { 
+                        {
                             //{
-                              //  if (decimal.TryParse(budgetValueTextBox.Text, out decimal budgetValue))
-                       // {
+                            //  if (decimal.TryParse(budgetValueTextBox.Text, out decimal budgetValue))
+                            // {
                             if (lodgingFares > airlineFares)
                             {
                                 MessageBox.Show("That room fare is not a budget fit value.");
@@ -1235,6 +1237,11 @@ namespace One_Stop_Tourist_identity_Application
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void passengerNameTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
